@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1de744849418f5f439ac534dd8dbcb43
-timeCreated: 1492861520
+timeCreated: 1492880581
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -108,6 +108,32 @@ TextureImporter:
         y: 51
         width: 10
         height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: inventory_objects_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: inventory_objects_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 34
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
