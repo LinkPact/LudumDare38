@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4934830213638876}
   - component: {fileID: 212408207111696546}
   - component: {fileID: 114889757209525098}
+  - component: {fileID: 61200207512754040}
   m_Layer: 0
   m_Name: DiggingSpot
   m_TagString: Untagged
@@ -34,13 +35,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071224531520210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.452, y: -1.768, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.48050702, y: 0.25906157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61200207512754040
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1071224531520210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.12, y: 0.07}
 --- !u!114 &114889757209525098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,7 +70,9 @@ MonoBehaviour:
   frames:
   - {fileID: 21300018, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
   - {fileID: 21300020, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
-  reward: {fileID: 0}
+  reward_prefab: {fileID: 1632301899059290, guid: affb2d38b081cde49b03a70753965499,
+    type: 2}
+  y_spawn_offset: 0
 --- !u!212 &212408207111696546
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1290765617055768}
+  m_RootGameObject: {fileID: 1315960156219562}
   m_IsPrefabParent: 1
---- !u!1 &1290765617055768
+--- !u!1 &1315960156219562
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4722409019960110}
-  - component: {fileID: 212636057125120648}
-  - component: {fileID: 61038016901475964}
-  - component: {fileID: 114320491948743360}
+  - component: {fileID: 4028976665705318}
+  - component: {fileID: 212887511018868644}
+  - component: {fileID: 61220600480682990}
+  - component: {fileID: 114328939002171056}
   m_Layer: 0
-  m_Name: Wood
+  m_Name: StrawBush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4722409019960110
+--- !u!4 &4028976665705318
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290765617055768}
+  m_GameObject: {fileID: 1315960156219562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1727558, y: -4.5202065, z: 0}
+  m_LocalPosition: {x: -0.472, y: -0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61038016901475964
+--- !u!61 &61220600480682990
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290765617055768}
+  m_GameObject: {fileID: 1315960156219562}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -55,25 +55,27 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.11, y: 0.11}
---- !u!114 &114320491948743360
+  m_Size: {x: 0.15, y: 0.13}
+--- !u!114 &114328939002171056
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290765617055768}
+  m_GameObject: {fileID: 1315960156219562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6145a759ad4d31a40b209cd26ce50da4, type: 3}
+  m_Script: {fileID: 11500000, guid: 087809c7159fd1e4197b6144540d0e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Wood!
---- !u!212 &212636057125120648
+  rope_prefab: {fileID: 1159009604887242, guid: 93a6d7995bb4e6d42a9f196c059f52a4,
+    type: 2}
+  y_spawn_offset: 0
+--- !u!212 &212887511018868644
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290765617055768}
+  m_GameObject: {fileID: 1315960156219562}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -99,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1489232977
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

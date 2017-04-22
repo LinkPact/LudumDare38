@@ -64,12 +64,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159009604887242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5bbaad55473d747a4faf9c6f0e711e, type: 3}
+  m_Script: {fileID: 11500000, guid: d4b9e695738fd724abafd5bc576e157e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: A primitive rope made from twined roots
-  item_to_spawn: {fileID: 114385498791136882, guid: 39fff278ff916d545913f17c52b2e63c,
-    type: 2}
+  message: A rope!
 --- !u!212 &212017278589735564
 SpriteRenderer:
   m_ObjectHideFlags: 1

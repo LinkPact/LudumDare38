@@ -15,7 +15,7 @@ public class BerryBush : MonoBehaviour {
     private SpriteRenderer sprite_renderer;
     private NeedsManager needs;
     private Inventory inventory;
-    public Item berry;
+    public Sprite berry_sprite;
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
@@ -52,7 +52,7 @@ public class BerryBush : MonoBehaviour {
         if (has_berries) {
             has_berries = false;
             needs.ReduceHunger(food_value);
-            inventory.AddItem(new Item(this.gameObject));
+            inventory.AddItem(new Item(this.gameObject, custom_sprite:berry_sprite));
             // inventory.AddItem(Instantiate(berry));
         }
     }
