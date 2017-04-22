@@ -9,73 +9,73 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1159944865951586}
+  m_RootGameObject: {fileID: 1159009604887242}
   m_IsPrefabParent: 1
---- !u!1 &1159944865951586
+--- !u!1 &1159009604887242
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4878267880796632}
-  - component: {fileID: 212133281673574626}
-  - component: {fileID: 61119617211248722}
-  - component: {fileID: 114546837269790754}
+  - component: {fileID: 4892075851346568}
+  - component: {fileID: 212017278589735564}
+  - component: {fileID: 61946656130482504}
+  - component: {fileID: 114975404597777600}
   m_Layer: 0
-  m_Name: Axe
+  m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4878267880796632
+--- !u!4 &4892075851346568
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1159944865951586}
+  m_GameObject: {fileID: 1159009604887242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.513, y: -1.085, z: 0}
+  m_LocalPosition: {x: 0.124, y: -0.003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61119617211248722
+--- !u!61 &61946656130482504
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1159944865951586}
+  m_GameObject: {fileID: 1159009604887242}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0010804683, y: -0.00019600103}
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1}
---- !u!114 &114546837269790754
+  m_Size: {x: 0.16782834, y: 0.15309048}
+--- !u!114 &114975404597777600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1159944865951586}
+  m_GameObject: {fileID: 1159009604887242}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5bbaad55473d747a4faf9c6f0e711e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: An axe
-  item_to_spawn: {fileID: 114935341872804474, guid: d4e5c3a9905fe3841b9021409586eda4,
+  message: A primitive rope made from twined roots
+  item_to_spawn: {fileID: 114385498791136882, guid: 39fff278ff916d545913f17c52b2e63c,
     type: 2}
---- !u!212 &212133281673574626
+--- !u!212 &212017278589735564
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1159944865951586}
+  m_GameObject: {fileID: 1159009604887242}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1489232977
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 1de744849418f5f439ac534dd8dbcb43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
