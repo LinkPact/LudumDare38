@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum StoryEvent {
-    None,
-    EndDay
-}
-
-public class StoryController : MonoBehaviour {
+public class TextDisplay : MonoBehaviour {
 
     public void ToggleDisplay(bool display_text) {
         this.display_text = display_text;
@@ -30,6 +25,7 @@ public class StoryController : MonoBehaviour {
 
     private DisplayElements display_elements;
     private NeedsManager needs_manager;
+    private StoryManager story_manager;
 
     public void ShowText(string message, bool button_prompt=false, StoryEvent yes_event=StoryEvent.None) {
 
@@ -40,17 +36,8 @@ public class StoryController : MonoBehaviour {
     }
 
     public void TrigEvent() {
-        switch (yes_event) {
-            case StoryEvent.EndDay:
-                print("End day triggered!");
-                needs_manager.StartNewDay();
-                break;
-            case StoryEvent.None:
-                print("None triggered!");
-                break;
-            default:
-                throw new System.Exception("Unknown trigger event: " + yes_event);
-        }
+        story_manager.TrigEvent(yes_event);
+        yes_event = StoryEvent.None;
     }
 
 	void Start () {
@@ -67,6 +54,7 @@ public class StoryController : MonoBehaviour {
         button_prompted = false;
 
         needs_manager = FindObjectOfType<NeedsManager>();
+        story_manager = FindObjectOfType<StoryManager>();
     }
 
     void Update () {

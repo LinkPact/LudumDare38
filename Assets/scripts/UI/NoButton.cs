@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class NoButton : MonoBehaviour {
 
-    private StoryController story_controller;
+    private TextDisplay story_controller;
 
     void Start () {
-        story_controller = GetComponentInParent<StoryController>();
+        story_controller = GetComponentInParent<TextDisplay>();
     }
 
     void Update () {

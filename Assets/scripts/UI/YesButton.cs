@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class YesButton : MonoBehaviour {
 
-    private StoryController story_controller;
+    private TextDisplay story_controller;
 
     void Start () {
-        story_controller = GetComponentInParent<StoryController>();
+        story_controller = GetComponentInParent<TextDisplay>();
 	}
 	
     public void TestLog() {

@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 224152471903278494}
   - component: {fileID: 114432654615547052}
   m_Layer: 5
-  m_Name: StoryController
+  m_Name: StoryTextDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

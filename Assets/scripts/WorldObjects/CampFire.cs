@@ -11,13 +11,13 @@ public class CampFire : MonoBehaviour {
     private int current_burn_frame;
 
     private SpriteRenderer rend;
-    private StoryController story_controller;
+    private TextDisplay story_controller;
 
     void Start () {
         burn_time = 0;
         current_burn_frame = 0;
         rend = GetComponent<SpriteRenderer>();
-        story_controller = GameObject.FindObjectOfType<StoryController>();
+        story_controller = GameObject.FindObjectOfType<TextDisplay>();
 	}
 	
 	void Update () {
