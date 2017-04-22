@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4878267880796632}
   - component: {fileID: 212133281673574626}
   - component: {fileID: 61119617211248722}
-  - component: {fileID: 114970902377071716}
+  - component: {fileID: 114546837269790754}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -56,7 +56,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
---- !u!114 &114970902377071716
+--- !u!114 &114546837269790754
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,11 +64,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1159944865951586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6735f4b973c3e649a5278001e370c14, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a5bbaad55473d747a4faf9c6f0e711e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: An axe!
-  axe_item: {fileID: 114935341872804474, guid: d4e5c3a9905fe3841b9021409586eda4, type: 2}
+  message: An axe
+  item_to_spawn: {fileID: 114935341872804474, guid: d4e5c3a9905fe3841b9021409586eda4,
+    type: 2}
 --- !u!212 &212133281673574626
 SpriteRenderer:
   m_ObjectHideFlags: 1
