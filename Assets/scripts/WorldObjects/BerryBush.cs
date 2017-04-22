@@ -18,6 +18,7 @@ public class BerryBush : MonoBehaviour {
     public Sprite berry_sprite;
     private TextDisplay story_controller;
     public string message = "template message";
+    public string no_berries_message = "No berries for you!";
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
@@ -28,17 +29,8 @@ public class BerryBush : MonoBehaviour {
 	}
 	
 	void Update () {
-        UpdateSpawn();
         AssignSprite();
 	}
-
-    private void UpdateSpawn() {
-        current_spawn_time += Time.deltaTime;
-        if (current_spawn_time > berry_spawn_time) {
-            has_berries = true;
-            current_spawn_time = 0;
-        }
-    }
 
     private void AssignSprite() {
         if (has_berries) {
@@ -52,10 +44,15 @@ public class BerryBush : MonoBehaviour {
     void OnMouseDown() {
 
         if (has_berries) {
-            has_berries = false;
-            needs.ReduceHunger(food_value);
-            inventory.AddItem(new Item(this.gameObject, custom_sprite:berry_sprite));
-            story_controller.ShowText(message, this.gameObject, button_prompt:true, yes_event: StoryEvent.PickBerry);
+            story_controller.ShowText(message, this.gameObject, button_prompt: true, yes_event: StoryEvent.PickBerry);
         }
+        else {
+            story_controller.ShowText(no_berries_message, this.gameObject);
+        }
+    }
+
+    public void AddBerryToInventory() {
+        has_berries = false;
+        inventory.AddItem(new Item(this.gameObject, custom_sprite: berry_sprite));
     }
 }

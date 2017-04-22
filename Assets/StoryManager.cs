@@ -39,6 +39,8 @@ public class StoryManager : MonoBehaviour {
 
     private void PickBerryEvent(GameObject caller) {
         needs_manager.SpendTime(1);
+        // inventory.AddItem(new Item(this.gameObject, custom_sprite: berry_sprite));
+        caller.GetComponent<BerryBush>().AddBerryToInventory();
         Debug.Log("PickBerry event" + needs_manager.Time_remaing);
     }
 
