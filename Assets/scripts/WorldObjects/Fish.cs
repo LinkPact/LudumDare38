@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour {
 
-	void Start () {
-		
-	}
+    private Inventory inventory;
+    public Item fish_item;
+
+    void Start () {
+        inventory = GameObject.FindObjectOfType<Inventory>();
+    }
 	
 	void Update () {
 		
 	}
 
     void OnMouseDown() {
+        inventory.AddItem(Instantiate(fish_item));
         Destroy(gameObject);
     }
 }
