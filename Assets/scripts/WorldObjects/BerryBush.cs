@@ -16,16 +16,18 @@ public class BerryBush : MonoBehaviour {
     private NeedsManager needs;
     private Inventory inventory;
     public Sprite berry_sprite;
+    private TextDisplay story_controller;
+    public string message = "template message";
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
         needs = GameObject.FindObjectOfType<NeedsManager>();
         inventory = GameObject.FindObjectOfType<Inventory>();
+        story_controller = GameObject.FindObjectOfType<TextDisplay>();
         has_berries = true;
 	}
 	
 	void Update () {
-
         UpdateSpawn();
         AssignSprite();
 	}
@@ -53,7 +55,7 @@ public class BerryBush : MonoBehaviour {
             has_berries = false;
             needs.ReduceHunger(food_value);
             inventory.AddItem(new Item(this.gameObject, custom_sprite:berry_sprite));
-            // inventory.AddItem(Instantiate(berry));
+            story_controller.ShowText(message, this.gameObject, button_prompt:true, yes_event: StoryEvent.PickBerry);
         }
     }
 }
