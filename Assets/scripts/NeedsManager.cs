@@ -6,10 +6,17 @@ public class NeedsManager : MonoBehaviour {
 
     public float hunger;
     public float hunger_max;
-    public float hunger_degen_time;    
+    public float hunger_degen_time;
+
+    private int day;
+    public int Day {
+        get {
+            return day;
+        }
+    }
 
 	void Start () {
-		
+        day = 1;
 	}
 	
 	void Update () {
@@ -26,4 +33,9 @@ public class NeedsManager : MonoBehaviour {
     public float GetHungerFraction() {
         return hunger / hunger_max;
     }
+
+    public void StartNewDay() {
+        day += 1;
+    }
+
 }

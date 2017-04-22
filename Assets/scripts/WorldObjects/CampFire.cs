@@ -11,11 +11,13 @@ public class CampFire : MonoBehaviour {
     private int current_burn_frame;
 
     private SpriteRenderer rend;
+    private StoryController story_controller;
 
-	void Start () {
+    void Start () {
         burn_time = 0;
         current_burn_frame = 0;
         rend = GetComponent<SpriteRenderer>();
+        story_controller = GameObject.FindObjectOfType<StoryController>();
 	}
 	
 	void Update () {
@@ -33,5 +35,9 @@ public class CampFire : MonoBehaviour {
         }
 
         rend.sprite = frames[current_burn_frame];
+    }
+
+    void OnMouseDown() {
+        story_controller.ShowText("Time to end day?", button_prompt:true, yes_event:StoryEvent.EndDay);
     }
 }
