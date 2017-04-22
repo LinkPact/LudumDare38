@@ -16,8 +16,7 @@ public class NeedsManager : MonoBehaviour {
         hunger -= hunger_degen_time * Time.deltaTime;
 	}
 
-    public void ReduceHunger(float value)
-    {
+    public void ReduceHunger(float value) {
         hunger += value;
         if (hunger > hunger_max) {
             hunger = hunger_max;
