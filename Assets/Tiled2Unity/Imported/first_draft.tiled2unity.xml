@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2017-04-22 07:17:55-->
+<!--Last exported: 2017-04-22 09:07:32-->
 <Tiled2Unity version="1.0.9.4">
   <AssignMaterial mesh="mesh_0001" material="spritesheet" />
   <Prefab name="first_draft" orientation="Orthogonal" staggerAxis="Y" staggerIndex="Odd" hexSideLength="0" numLayers="1" numTilesWide="20" numTilesHigh="20" tileWidth="16" tileHeight="16" exportScale="0.01" mapWidthInPixels="320" mapHeightInPixels="320">
