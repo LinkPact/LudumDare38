@@ -15,7 +15,7 @@ public class Axe : MonoBehaviour {
     }
 
     void OnMouseDown() {
-        story_controller.ShowText(message);
+        story_controller.ShowText(message, this.gameObject);
         inventory.AddItem(Instantiate(axe_item));
         Destroy(gameObject);
     }

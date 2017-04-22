@@ -15,7 +15,7 @@ public class StoryManager : MonoBehaviour {
         needs_manager = FindObjectOfType<NeedsManager>();
 	}
 	
-    public void TrigEvent(StoryEvent story_event) {
+    public void TrigEvent(StoryEvent story_event, GameObject caller) {
         switch (story_event) {
             case StoryEvent.EndDay:
                 StartNewDayEvent();

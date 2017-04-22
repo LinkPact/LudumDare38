@@ -12,6 +12,6 @@ public class Gravestone : MonoBehaviour {
 	}
 	
     void OnMouseDown() {
-        story_controller.ShowText(message);
+        story_controller.ShowText(message, this.gameObject);
     }
 }

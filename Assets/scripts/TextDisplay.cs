@@ -19,6 +19,7 @@ public class TextDisplay : MonoBehaviour {
     private Text text;
     private YesButton yes_button;
     private NoButton no_button;
+    private GameObject last_caller;
 
     private float display_time;
     public float min_display_time = 0.1f;
@@ -27,16 +28,17 @@ public class TextDisplay : MonoBehaviour {
     private NeedsManager needs_manager;
     private StoryManager story_manager;
 
-    public void ShowText(string message, bool button_prompt=false, StoryEvent yes_event=StoryEvent.None) {
+    public void ShowText(string message, GameObject caller, bool button_prompt=false, StoryEvent yes_event=StoryEvent.None) {
 
         text.text = message;
         ToggleDisplay(true);
         button_prompted = button_prompt;
         this.yes_event = yes_event;
+        last_caller = caller;
     }
 
     public void TrigEvent() {
-        story_manager.TrigEvent(yes_event);
+        story_manager.TrigEvent(yes_event, last_caller);
         yes_event = StoryEvent.None;
     }
 

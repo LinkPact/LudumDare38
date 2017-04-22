@@ -38,6 +38,6 @@ public class CampFire : MonoBehaviour {
     }
 
     void OnMouseDown() {
-        story_controller.ShowText("Time to end day?", button_prompt:true, yes_event:StoryEvent.EndDay);
+        story_controller.ShowText("Time to end day?", this.gameObject, button_prompt:true, yes_event:StoryEvent.EndDay);
     }
 }
