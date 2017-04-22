@@ -22,4 +22,8 @@ public class NeedsManager : MonoBehaviour {
             hunger = hunger_max;
         }
     }
+
+    public float GetHungerFraction() {
+        return hunger / hunger_max;
+    }
 }
