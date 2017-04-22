@@ -9,11 +9,11 @@ public class BerryBush : MonoBehaviour {
     public bool has_berries = true;
 
     private SpriteRenderer sprite_renderer;
-    private NeedsManager needs;
+    //private NeedsManager needs;
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
-        needs = GameObject.FindObjectOfType<NeedsManager>();
+        //needs = GameObject.FindObjectOfType<NeedsManager>();
 	}
 	
 	void Update () {
@@ -28,6 +28,6 @@ public class BerryBush : MonoBehaviour {
 
     void OnMouseDown() {
         has_berries = !has_berries;
-        needs.
+        //needs.
     }
 }
