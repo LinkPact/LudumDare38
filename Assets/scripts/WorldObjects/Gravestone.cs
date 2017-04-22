@@ -5,7 +5,6 @@ using UnityEngine;
 public class Gravestone : MonoBehaviour {
 
     private StoryController story_controller;
-
     public string message = "template message";
 
 	void Start () {
