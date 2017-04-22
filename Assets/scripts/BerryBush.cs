@@ -7,13 +7,14 @@ public class BerryBush : MonoBehaviour {
     public Sprite[] sprites;
 
     public bool has_berries = true;
+    public float food_value;
 
     private SpriteRenderer sprite_renderer;
-    //private NeedsManager needs;
+    private NeedsManager needs;
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
-        //needs = GameObject.FindObjectOfType<NeedsManager>();
+        needs = GameObject.FindObjectOfType<NeedsManager>();
 	}
 	
 	void Update () {
@@ -28,6 +29,6 @@ public class BerryBush : MonoBehaviour {
 
     void OnMouseDown() {
         has_berries = !has_berries;
-        //needs.
+        needs.ReduceHunger(food_value);
     }
 }
