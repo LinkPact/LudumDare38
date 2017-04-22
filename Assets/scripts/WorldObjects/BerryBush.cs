@@ -52,7 +52,8 @@ public class BerryBush : MonoBehaviour {
         if (has_berries) {
             has_berries = false;
             needs.ReduceHunger(food_value);
-            inventory.AddItem(Instantiate(berry));
+            inventory.AddItem(new Item(this.gameObject));
+            // inventory.AddItem(Instantiate(berry));
         }
     }
 }

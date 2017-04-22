@@ -16,7 +16,8 @@ public class Fish : MonoBehaviour {
 	}
 
     void OnMouseDown() {
-        inventory.AddItem(Instantiate(fish_item));
+        // inventory.AddItem(Instantiate(fish_item));
+        inventory.AddItem(new Item(this.gameObject));
         Destroy(gameObject);
     }
 }
