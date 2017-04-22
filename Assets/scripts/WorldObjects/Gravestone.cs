@@ -10,7 +10,6 @@ public class Gravestone : MonoBehaviour {
 
 	void Start () {
         story_controller = GameObject.FindObjectOfType<StoryController>();
-        print(story_controller);
 	}
 	
     void OnMouseDown() {

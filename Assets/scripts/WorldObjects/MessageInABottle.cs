@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MessageInABottle : MonoBehaviour {
 
-	// Use this for initialization
+    private StoryController story_controller;
+
+    public string message = "template message";
+
 	void Start () {
-		
+        story_controller = GameObject.FindObjectOfType<StoryController>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void OnMouseDown() {
+        story_controller.ShowText(message);
+        Destroy(gameObject);
+    }
 }

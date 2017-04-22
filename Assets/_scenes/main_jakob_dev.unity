@@ -91,6 +91,79 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &318350997
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.806
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &318350998 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e,
+    type: 2}
+  m_PrefabInternal: {fileID: 318350997}
+--- !u!114 &318350999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318350998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Are you still there? Hang in there...
+--- !u!61 &318351000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318350998}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.07}
 --- !u!1001 &612057529
 Prefab:
   m_ObjectHideFlags: 0
@@ -146,7 +219,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4599810384001996, guid: 15a3fd14df475e644aa13d02dbdb0096, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: -1.685
       objectReference: {fileID: 0}
     - target: {fileID: 4599810384001996, guid: 15a3fd14df475e644aa13d02dbdb0096, type: 2}
       propertyPath: m_LocalPosition.z
@@ -172,10 +245,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 212554481138444160, guid: 15a3fd14df475e644aa13d02dbdb0096,
+    - target: {fileID: 114201532607473834, guid: 15a3fd14df475e644aa13d02dbdb0096,
         type: 2}
-      propertyPath: m_SortingLayerID
-      value: -1489232977
+      propertyPath: fish_prefab
+      value: 
+      objectReference: {fileID: 1953745582771070, guid: 2f1775a250171fe4ea27cbe7ffae09c2,
+        type: 2}
+    - target: {fileID: 114201532607473834, guid: 15a3fd14df475e644aa13d02dbdb0096,
+        type: 2}
+      propertyPath: fish_spawn_time
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15a3fd14df475e644aa13d02dbdb0096, type: 2}
