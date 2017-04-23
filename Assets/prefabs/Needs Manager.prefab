@@ -53,4 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hunger: 100
   hunger_max: 100
-  hunger_degen_time: 0.1
+  hunger_degen_time: 7
+  time_in_a_day: 12
