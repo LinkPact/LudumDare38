@@ -35,6 +35,7 @@ public class TextDisplay : MonoBehaviour {
         button_prompted = button_prompt;
         this.yes_event = yes_event;
         last_caller = caller;
+        display_time = 0;
     }
 
     public void TrigEvent() {
