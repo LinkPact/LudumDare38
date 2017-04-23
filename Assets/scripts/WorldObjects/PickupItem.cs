@@ -18,6 +18,7 @@ namespace Assets.scripts.WorldObjects {
         }
 
         void OnMouseDown() {
+
             story_controller.ShowText(message, this.gameObject);
             inventory.AddItem(new Item(this.gameObject));
             Destroy(gameObject);

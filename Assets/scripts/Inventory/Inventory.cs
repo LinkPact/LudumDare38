@@ -20,16 +20,52 @@ public class Inventory : MonoBehaviour {
         }
     }
 
-    public void RemoveItem(Item item_to_remove)
-    {
-        for (int i = 0; i < items.Length; i++)
-        {
-            if (items[i] == item_to_remove)
-            {
+    public void RemoveItem(Item item_to_remove) {
+        for (int i = 0; i < items.Length; i++) {
+            if (items[i] == item_to_remove) {
                 items[i] = null;
                 itemImages[i].sprite = null;
                 itemImages[i].enabled = false;
                 return;
+            }
+        }
+    }
+
+    public bool ItemsInInventory(WorldObjectType[] target_items) {
+        foreach (WorldObjectType obj_type in target_items) {
+            if (!ItemInInventory(obj_type)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public bool ItemInInventory(WorldObjectType object_type) {
+
+        foreach (Item item in items) {
+
+            if (item == null) {
+                continue;
+            }
+
+            if (item.object_type == object_type) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void ConsumeItems(WorldObjectType[] target_items) {
+        foreach (WorldObjectType obj_type in target_items) {
+            foreach (Item item in items) {
+                if (item == null) {
+                    continue;
+                }
+
+                if (item.object_type == obj_type) {
+                    RemoveItem(item);
+                    break;
+                }
             }
         }
     }

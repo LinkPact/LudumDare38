@@ -18,7 +18,8 @@ public enum WorldObjectType {
     shovel,
     straw_bush,
     tree,
-    wood
+    wood,
+    empty
 }
 
 public class WorldObjectInformation : MonoBehaviour {

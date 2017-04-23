@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 114006015704325088}
   - component: {fileID: 222455384333569822}
   - component: {fileID: 114173897519601432}
+  - component: {fileID: 114875293385188252}
   m_Layer: 5
   m_Name: ShovelOption
   m_TagString: Untagged
@@ -305,6 +306,7 @@ GameObject:
   - component: {fileID: 114695394564145410}
   - component: {fileID: 222240347244385008}
   - component: {fileID: 114832142017502868}
+  - component: {fileID: 114452618313890308}
   m_Layer: 5
   m_Name: FishingRodOption
   m_TagString: Untagged
@@ -340,6 +342,7 @@ GameObject:
   - component: {fileID: 114443795209441406}
   - component: {fileID: 222784865640338446}
   - component: {fileID: 114361319675279478}
+  - component: {fileID: 114039392263026688}
   m_Layer: 5
   m_Name: AxeOption
   m_TagString: Untagged
@@ -464,7 +467,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114173897519601432}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114875293385188252}
+        m_MethodName: CraftItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114016691777104538
@@ -521,6 +535,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114039392263026688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1914411090324188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a227bb8dc6656484992af0671e055935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_items: 0f0000000a000000
+  craft_result: {fileID: 1159944865951586, guid: b02f9f83889e9d3459d1b05211835230,
+    type: 2}
 --- !u!114 &114120947411855600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -855,9 +883,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114361319675279478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114039392263026688}
+        m_MethodName: CraftItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114452618313890308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1846058765221118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a227bb8dc6656484992af0671e055935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_items: 0f00000009000000
+  craft_result: {fileID: 1905689602975352, guid: 4bd1b75a9f7147b4088c81cbe017e037,
+    type: 2}
 --- !u!114 &114485056223970148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1031,7 +1084,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114832142017502868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114452618313890308}
+        m_MethodName: CraftItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114832142017502868
@@ -1061,6 +1125,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114875293385188252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1345199818418118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a227bb8dc6656484992af0671e055935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_items: 0f0000000900000006000000
+  craft_result: {fileID: 1632301899059290, guid: affb2d38b081cde49b03a70753965499,
+    type: 2}
 --- !u!114 &114878873372365506
 MonoBehaviour:
   m_ObjectHideFlags: 1
