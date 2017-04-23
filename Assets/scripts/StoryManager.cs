@@ -51,7 +51,8 @@ public class StoryManager : MonoBehaviour {
 
     private void PickBerryEvent(GameObject caller) {
         needs_manager.SpendTime(1);
-        caller.GetComponent<BerryBush>().AddBerryToInventory();
+        needs_manager.ReduceHunger(caller.GetComponent<BerryBush>().food_value);
+        caller.GetComponent<BerryBush>().has_berries = false;
     }
 
     private void EatBerry(GameObject caller) {

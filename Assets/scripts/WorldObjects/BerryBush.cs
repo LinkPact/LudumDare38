@@ -50,9 +50,4 @@ public class BerryBush : MonoBehaviour {
             story_controller.ShowText(no_berries_message, this.gameObject);
         }
     }
-
-    public void AddBerryToInventory() {
-        has_berries = false;
-        inventory.AddItem(new Item(this.gameObject, custom_sprite: berry_sprite));
-    }
 }
