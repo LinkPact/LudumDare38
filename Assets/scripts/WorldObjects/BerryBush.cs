@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BerryBush : MonoBehaviour {
 
@@ -40,6 +41,10 @@ public class BerryBush : MonoBehaviour {
     }
 
     void OnMouseDown() {
+
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }
 
         if (has_berries) {
             int event_time = story_manager.GetEventTime(StoryEvent.PickBerry);

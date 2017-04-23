@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CampFire : MonoBehaviour {
 
@@ -38,6 +39,11 @@ public class CampFire : MonoBehaviour {
     }
 
     void OnMouseDown() {
+
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }
+
         story_controller.ShowText("Time to end day?", this.gameObject, button_prompt:true, yes_event:StoryEvent.EndDay);
     }
 }

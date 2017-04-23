@@ -15,7 +15,6 @@ public class NoButton : MonoBehaviour {
 	}
 
     public void TestLog() {
-        print("No Test!");
         story_controller.ToggleDisplay(false);
     }
 }

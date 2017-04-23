@@ -29,6 +29,7 @@ public class NeedsManager : MonoBehaviour {
         day = 1;
         time_remaing = time_in_a_day;
         day_events = FindObjectOfType<DayEvents>();
+        day_events.ActivateDay(day);
 	}
 
     private void Update() {
@@ -60,7 +61,7 @@ public class NeedsManager : MonoBehaviour {
     public void StartNewDay() {
         day += 1;
         time_remaing = time_in_a_day;
-        day_events.ActivateDay(1);
+        day_events.ActivateDay(day);
     }
 
 }

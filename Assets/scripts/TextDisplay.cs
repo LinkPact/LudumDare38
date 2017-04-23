@@ -39,11 +39,12 @@ public class TextDisplay : MonoBehaviour {
     }
 
     public void TrigEvent() {
+
         story_manager.TrigEvent(yes_event, last_caller);
         yes_event = StoryEvent.None;
     }
 
-	void Start () {
+    void Start () {
 
         display_text = false;
         display_elements = GetComponentInChildren<DisplayElements>();
@@ -63,19 +64,15 @@ public class TextDisplay : MonoBehaviour {
     void Update () {
 
         if (button_prompted) {
-            PerformButtonPrompt();
         }
         else if (display_text && display_time > min_display_time 
             && Input.GetMouseButtonDown(0)) {
             ToggleDisplay(false);
             display_time = 0;
+            Event.current.Use();
         }
 
         UpdateTextDisplay();
-    }
-
-    private void PerformButtonPrompt() {
-
     }
 
     private void UpdateTextDisplay() {
@@ -83,6 +80,7 @@ public class TextDisplay : MonoBehaviour {
         if (display_text) {
             display_time += Time.deltaTime;
         }
+
 
         if (display_has_changed) {
             display_has_changed = false;

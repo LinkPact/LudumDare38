@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Fish : MonoBehaviour {
 
@@ -20,6 +21,10 @@ public class Fish : MonoBehaviour {
     }
 
     void OnMouseDown() {
+
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }
 
         int event_time;
         StoryEvent story_event;

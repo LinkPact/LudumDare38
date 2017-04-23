@@ -10,11 +10,13 @@ public class DayEvents : MonoBehaviour {
         day_objects[day - 1].SetActive(true);
     }
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
+    void Start() {
+        InactivateAll();
+    }
+
+    private void InactivateAll() {
+        foreach (GameObject day_object in day_objects) {
+            day_object.SetActive(false);
+        }
+    }
 }

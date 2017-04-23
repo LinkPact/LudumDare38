@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DiggingSpot : MonoBehaviour {
 
@@ -32,6 +33,10 @@ public class DiggingSpot : MonoBehaviour {
     }
 
     void OnMouseDown() {
+
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            return;
+        }
 
         if (!is_digged) {
             int event_time;

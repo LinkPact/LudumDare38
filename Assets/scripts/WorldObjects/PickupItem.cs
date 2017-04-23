@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.scripts.WorldObjects {
     public class PickupItem : MonoBehaviour {
@@ -23,6 +24,10 @@ namespace Assets.scripts.WorldObjects {
         }
 
         void OnMouseDown() {
+
+            if (EventSystem.current.IsPointerOverGameObject()) {
+                return;
+            }
 
             if (!text_displayer.IsDisplaying() && !crafting_system.IsActive()) {
                 story_controller.ShowText(message, this.gameObject);

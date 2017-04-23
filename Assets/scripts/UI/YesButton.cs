@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class YesButton : MonoBehaviour {
 
-    private TextDisplay story_controller;
+    private TextDisplay story_text_displayer;
 
     void Start () {
-        story_controller = GetComponentInParent<TextDisplay>();
+        story_text_displayer = GetComponentInParent<TextDisplay>();
 	}
 	
     public void TestLog() {
-        print("Yes Test!");
-        story_controller.ToggleDisplay(false);
-        story_controller.TrigEvent();
+        story_text_displayer.ToggleDisplay(false);
+        story_text_displayer.TrigEvent();
     }
 }

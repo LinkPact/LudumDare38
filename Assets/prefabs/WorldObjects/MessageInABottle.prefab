@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1213395064516026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8711127, y: 0.009985685, z: 0}
+  m_LocalPosition: {x: 3.0683427, y: -4.3955226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Are you still there? Hang in there...
+  message: Message
 --- !u!212 &212218863676708932
 SpriteRenderer:
   m_ObjectHideFlags: 1
