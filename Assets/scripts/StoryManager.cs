@@ -38,17 +38,18 @@ public class StoryManager : MonoBehaviour {
         event_time_dict = new Dictionary<StoryEvent, int>();
         event_time_dict.Add(StoryEvent.PickBerry, 1);
         event_time_dict.Add(StoryEvent.Fish, 7);
-        event_time_dict.Add(StoryEvent.FishWithFishingRod, 3);
+        event_time_dict.Add(StoryEvent.FishWithFishingRod, 2);
         event_time_dict.Add(StoryEvent.MakeRope, 4);
         event_time_dict.Add(StoryEvent.DigSpot, 5);
         event_time_dict.Add(StoryEvent.DigSpotWithShovel, 3);
-        event_time_dict.Add(StoryEvent.CutTree, 6);
+        event_time_dict.Add(StoryEvent.CutTree, 7);
         event_time_dict.Add(StoryEvent.CutTreeWithAxe, 3);
         event_time_dict.Add(StoryEvent.BuildBoat, 8);
         event_time_dict.Add(StoryEvent.SailBoat, 0);
     }
 
     public int GetEventTime(StoryEvent target_event) {
+        print(target_event);
         int event_time = event_time_dict[target_event];
         return event_time;
     }
@@ -155,6 +156,7 @@ public class StoryManager : MonoBehaviour {
             ShipWreck ship = caller.GetComponent<ShipWreck>();
             ship.PerformRepairs();
             inventory.ConsumeItems(ship.GetRepairItems());
+            needs_manager.SpendTime(event_time_dict[StoryEvent.BuildBoat]);
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);

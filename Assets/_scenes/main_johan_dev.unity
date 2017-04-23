@@ -1875,11 +1875,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1085624448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.775, y: 1.15, z: 0}
+  m_LocalPosition: {x: 0.775, y: 1.1499999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1319230203}
-  m_RootOrder: 1
+  m_Father: {fileID: 2096316631}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1085624450
 MonoBehaviour:
@@ -2574,7 +2574,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2041065578}
-  - {fileID: 1085624449}
   - {fileID: 1150128530}
   m_Father: {fileID: 1094200786}
   m_RootOrder: 2
@@ -2735,7 +2734,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1453215208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.151, y: -1.406, z: 0}
+  m_LocalPosition: {x: -0.327, y: -1.406, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2096316631}
@@ -2766,7 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Are you still there? Hang in there...
+  message: Are you starving yet? The berries won't last forever...
 --- !u!61 &1453215212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3604,6 +3603,7 @@ Transform:
   - {fileID: 1767809314}
   - {fileID: 759702370}
   - {fileID: 1535743765}
+  - {fileID: 1085624449}
   m_Father: {fileID: 1094200786}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

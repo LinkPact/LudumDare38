@@ -6,13 +6,13 @@ public class ShipWreck : MonoBehaviour {
 
     private TextDisplay story_display;
     private Inventory inventory;
-    private WorldObjectType[] repair_items;
     private NeedsManager needs_manager;
     private StoryManager story_manager;
     private SailingShip sailing_ship;
 
     public Sprite[] repair_stages;
     private SpriteRenderer sprite_renderer;
+    public WorldObjectType[] repair_items;
 
     private int current_repair_levels;
     public int total_repair_levels;
@@ -41,9 +41,9 @@ public class ShipWreck : MonoBehaviour {
         sailing_ship = FindObjectOfType<SailingShip>();
         sprite_renderer = GetComponent<SpriteRenderer>();
 
-        repair_items = new WorldObjectType[2];
-        repair_items[0] = WorldObjectType.rope;
-        repair_items[1] = WorldObjectType.wood;
+        // repair_items = new WorldObjectType[2];
+        // repair_items[0] = WorldObjectType.rope;
+        // repair_items[1] = WorldObjectType.wood;
         current_repair_levels = 0;
     }
 
@@ -57,6 +57,8 @@ public class ShipWreck : MonoBehaviour {
 
         bool has_items = inventory.ItemsInInventory(repair_items);
         bool has_time = needs_manager.TimeRemaining >= repair_time;
+
+        print(has_items);
 
         if (!RepairsDone()) {
             if (has_items && has_time) {

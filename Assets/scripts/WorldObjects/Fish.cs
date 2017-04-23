@@ -32,7 +32,7 @@ public class Fish : MonoBehaviour {
 
         if (inventory.ItemInInventory(WorldObjectType.fishing_rod)) {
             story_event = StoryEvent.FishWithFishingRod;
-            message = "Fish with fishing rod?";
+            message = "Fish with fishing rod and eat fish?";
             event_time = story_manager.GetEventTime(story_event);
             story_text_display.ShowText(message + "\n(" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
         }
