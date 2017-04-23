@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class Fish : MonoBehaviour {
 
-    private Inventory inventory;
     public Item fish_item;
+    public float food_value;
+
+    private TextDisplay story_text_display;
+    private SpriteRenderer rend;
+    public string message = "template message";
 
     void Start () {
-        inventory = GameObject.FindObjectOfType<Inventory>();
+        story_text_display = FindObjectOfType<TextDisplay>();
+        rend = GetComponent<SpriteRenderer>();
     }
-	
-	void Update () {
-		
-	}
 
     void OnMouseDown() {
-        // inventory.AddItem(Instantiate(fish_item));
-        inventory.AddItem(new Item(this.gameObject));
-        Destroy(gameObject);
+        story_text_display.ShowText(message, this.gameObject, button_prompt: true, yes_event: StoryEvent.Fish);
     }
+
+    public void OnFishEvent() {
+        Destroy(gameObject);
+    } 
 }

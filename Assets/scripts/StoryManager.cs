@@ -6,6 +6,7 @@ public enum StoryEvent {
     None,
     PickBerry,
     EatBerry,
+    Fish,
     MakeRope,
     DigSpot,
     CutTree,
@@ -33,6 +34,9 @@ public class StoryManager : MonoBehaviour {
             case StoryEvent.EatBerry:
                 EatBerry(caller);
                 break;
+            case StoryEvent.Fish:
+                Fishing(caller);
+                break;
             case StoryEvent.MakeRope:
                 MakeRope(caller);
                 break;
@@ -58,6 +62,12 @@ public class StoryManager : MonoBehaviour {
     private void EatBerry(GameObject caller) {
         //needs.ReduceHunger(food_value);
         //inventory.RemoveItem();
+    }
+
+    private void Fishing(GameObject caller) {
+        needs_manager.SpendTime(4);
+        needs_manager.ReduceHunger(caller.GetComponent<Fish>().food_value);
+        caller.GetComponent<Fish>().OnFishEvent();
     }
 
     private void MakeRope(GameObject caller) {

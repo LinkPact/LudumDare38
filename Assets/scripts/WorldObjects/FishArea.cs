@@ -7,13 +7,14 @@ public class FishArea : MonoBehaviour {
     public GameObject fish_prefab;
 
     private float current_spawn_time;
-    public float fish_spawn_time = 2;
+    public float fish_spawn_time = 60;
 
     public float max_spawn_offset = 1;
 
 	void Start () {
         current_spawn_time = 0;
-	}
+        SpawnFish();
+    }
 	
 	void Update () {
         UpdateSpawn();        

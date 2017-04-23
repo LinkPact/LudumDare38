@@ -80,6 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c17e50eaa61bb42860d495d33e800f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  food_value: 80
+  message: Spend 4 h fishing?
 --- !u!212 &212641467113900264
 SpriteRenderer:
   m_ObjectHideFlags: 1
