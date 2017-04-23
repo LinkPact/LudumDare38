@@ -9,6 +9,8 @@ public class NeedsManager : MonoBehaviour {
     public float hunger_degen_time;
 
     private DayEvents day_events;
+    private Player player;
+    private TextDisplay story_manager;
 
     private int day;
     public int Day {
@@ -29,11 +31,15 @@ public class NeedsManager : MonoBehaviour {
         day = 1;
         time_remaing = time_in_a_day;
         day_events = FindObjectOfType<DayEvents>();
-	}
+        player = FindObjectOfType<Player>();
+        story_manager = GameObject.FindObjectOfType<TextDisplay>();
+    }
 
     private void Update() {
         if (hunger < 0) {
             Debug.Log("You died");
+            player.Died();
+            story_manager.ShowText("You died! Play again?", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
         }
     }
 
