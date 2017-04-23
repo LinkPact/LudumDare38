@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4189518562060112}
   - component: {fileID: 212576792242914764}
-  - component: {fileID: 114652076683166046}
   - component: {fileID: 61424478640667420}
+  - component: {fileID: 114652076683166046}
   - component: {fileID: 114937802929451350}
   m_Layer: 0
   m_Name: FlatStone
