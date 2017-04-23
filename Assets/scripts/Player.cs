@@ -3,19 +3,21 @@
 public class Player : MonoBehaviour {
 
     public float move_speed = 0.01f;
+    public Sprite grave_sprite;
+    private bool alive = true;
 
-    private SpriteRenderer renderer;
+    private SpriteRenderer sprite_renderer;
     private Rigidbody2D rigi;
 
 	void Start () {
-        renderer = GetComponent<SpriteRenderer>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
         rigi = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update () {
-
-        UpdateMovement();
-
+        if (alive) {
+            UpdateMovement();
+        }
 	}
 
     private void UpdateMovement() {
@@ -30,5 +32,10 @@ public class Player : MonoBehaviour {
         if (vertical_input != 0) {
             transform.position = new Vector2(transform.position.x, transform.position.y + move_speed * vertical_input);
         }
+    }
+
+    public void Died() {
+        sprite_renderer.sprite = grave_sprite;
+        alive = false;
     }
 }

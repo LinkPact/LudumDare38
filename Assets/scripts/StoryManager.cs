@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum StoryEvent {
     None,
@@ -13,7 +14,8 @@ public enum StoryEvent {
     CutTree,
     CutTreeWithAxe,
     BuildBoat,
-    EndDay
+    EndDay,
+    Restart
 }
 
 public class StoryManager : MonoBehaviour {
@@ -21,6 +23,7 @@ public class StoryManager : MonoBehaviour {
     private NeedsManager needs_manager;
     private Inventory inventory;
     private TextDisplay story_controller;
+    private Player player;
 
     public Dictionary<StoryEvent, int> event_time_dict;
     public string no_time_message = "Not enough time left of this day. Get some sleep by the fire";
@@ -28,7 +31,8 @@ public class StoryManager : MonoBehaviour {
     void Start () {
         needs_manager = FindObjectOfType<NeedsManager>();
         inventory = FindObjectOfType<Inventory>();
-        story_controller = GameObject.FindObjectOfType<TextDisplay>();
+        story_controller = FindObjectOfType<TextDisplay>();
+        player = FindObjectOfType<Player>();
 
         event_time_dict = new Dictionary<StoryEvent, int>();
         event_time_dict.Add(StoryEvent.PickBerry, 1);
@@ -78,6 +82,8 @@ public class StoryManager : MonoBehaviour {
                 break;
             case StoryEvent.BuildBoat:
                 BuildBoat(caller);
+                break;
+                Restart();
                 break;
             case StoryEvent.None:
                 throw new System.Exception("None event triggered");
@@ -150,5 +156,9 @@ public class StoryManager : MonoBehaviour {
     private void StartNewDayEvent() {
         print("End day triggered!!");
         needs_manager.StartNewDay();
+    }
+
+    private void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
