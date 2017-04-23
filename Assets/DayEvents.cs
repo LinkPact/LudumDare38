@@ -7,11 +7,13 @@ public class DayEvents : MonoBehaviour {
     public GameObject[] day_objects;
 
     public void ActivateDay(int day) {
+        print("Activating day: " + day);
         day_objects[day - 1].SetActive(true);
     }
 
     void Start() {
         InactivateAll();
+        day_objects[0].SetActive(true);
     }
 
     private void InactivateAll() {

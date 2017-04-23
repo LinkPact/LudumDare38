@@ -31,7 +31,6 @@ public class NeedsManager : MonoBehaviour {
         day = 1;
         time_remaing = time_in_a_day;
         day_events = FindObjectOfType<DayEvents>();
-        day_events.ActivateDay(day);
         player = FindObjectOfType<Player>();
         story_manager = GameObject.FindObjectOfType<TextDisplay>();
     }

@@ -36,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1071224531520210}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.48050702, y: 0.25906157, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.613, y: -1.606, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +83,7 @@ MonoBehaviour:
   frames:
   - {fileID: 21300018, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
   - {fileID: 21300020, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
-  reward_prefab: {fileID: 1585276818956404, guid: eb4ea7d17768ed74b93307aa6b5c36da,
-    type: 2}
+  reward_prefab: {fileID: 0}
   y_spawn_offset: 0
 --- !u!212 &212408207111696546
 SpriteRenderer:

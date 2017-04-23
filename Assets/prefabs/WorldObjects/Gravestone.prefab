@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212124530771425806}
   - component: {fileID: 61478823846422052}
   - component: {fileID: 114996729375833530}
+  - component: {fileID: 60273025439916574}
   m_Layer: 0
   m_Name: Gravestone
   m_TagString: Untagged
@@ -43,6 +44,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60273025439916574
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917882802664654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.055, y: 0.074999996}
+      - {x: -0.055, y: -0.074999996}
+      - {x: 0.055, y: -0.074999996}
+      - {x: 0.055, y: 0.074999996}
 --- !u!61 &61478823846422052
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -54,9 +73,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.05}
   serializedVersion: 2
-  m_Size: {x: 0.11, y: 0.15}
+  m_Size: {x: 0.11, y: 0.06}
 --- !u!114 &114255652940598756
 MonoBehaviour:
   m_ObjectHideFlags: 1

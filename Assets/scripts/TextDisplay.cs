@@ -69,7 +69,6 @@ public class TextDisplay : MonoBehaviour {
             && Input.GetMouseButtonDown(0)) {
             ToggleDisplay(false);
             display_time = 0;
-            Event.current.Use();
         }
 
         UpdateTextDisplay();

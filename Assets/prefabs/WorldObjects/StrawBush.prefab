@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 61220600480682990}
   - component: {fileID: 114328939002171056}
   - component: {fileID: 114217045085537660}
+  - component: {fileID: 60297038596394940}
   m_Layer: 0
   m_Name: StrawBush
   m_TagString: Untagged
@@ -43,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60297038596394940
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315960156219562}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.065, y: 0.065}
+      - {x: -0.074999996, y: 0.055}
+      - {x: -0.074999996, y: -0.065}
+      - {x: 0.044999998, y: -0.065}
+      - {x: 0.074999996, y: -0.024999999}
+      - {x: 0.074999996, y: 0.065}
 --- !u!61 &61220600480682990
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -52,7 +73,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: -0.01, y: -0.04}
   serializedVersion: 2
@@ -112,7 +133,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1489232977
+  m_SortingLayerID: -1853910733
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
