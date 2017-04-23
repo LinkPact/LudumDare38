@@ -6,6 +6,7 @@ public enum StoryEvent {
     None,
     PickBerry,
     EatBerry,
+    MakeRope,
     EndDay
 }
 
@@ -30,6 +31,9 @@ public class StoryManager : MonoBehaviour {
             case StoryEvent.EatBerry:
                 EatBerry(caller);
                 break;
+            case StoryEvent.MakeRope:
+                MakeRope(caller);
+                break;
             case StoryEvent.None:
                 throw new System.Exception("None event triggered");
             default:
@@ -39,15 +43,20 @@ public class StoryManager : MonoBehaviour {
 
     private void PickBerryEvent(GameObject caller) {
         needs_manager.SpendTime(1);
-        // inventory.AddItem(new Item(this.gameObject, custom_sprite: berry_sprite));
         caller.GetComponent<BerryBush>().AddBerryToInventory();
-        Debug.Log("PickBerry event" + needs_manager.Time_remaing);
     }
 
     private void EatBerry(GameObject caller) {
         //needs.ReduceHunger(food_value);
         //inventory.RemoveItem();
     }
+
+    private void MakeRope(GameObject caller) {
+        caller.GetComponent<StrawBush>().AddRopeToInventory();
+        needs_manager.SpendTime(3);
+
+    }
+
     private void StartNewDayEvent() {
         print("End day triggered!!");
         needs_manager.StartNewDay();
