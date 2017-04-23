@@ -30,14 +30,17 @@ public class DiggingSpot : MonoBehaviour {
     void OnMouseDown() {
 
         if (!is_digged) {
-            story_text_display.ShowText("Let's dig!", this.gameObject);
-            GameObject reward_instance = Instantiate(this.reward_prefab);
-            reward_instance.transform.position = new Vector3(transform.position.x, transform.position.y + y_spawn_offset, transform.position.z);
-            is_digged = true;
+            story_text_display.ShowText("Let's dig!", this.gameObject, button_prompt: true, yes_event: StoryEvent.DigSpot);
         }
         else {
             story_text_display.ShowText("No more digging here, find another spot!", this.gameObject);
         }
 
+    }
+
+    public void AddRewardToInventory() {
+        GameObject reward_instance = Instantiate(this.reward_prefab);
+        reward_instance.transform.position = new Vector3(transform.position.x, transform.position.y + y_spawn_offset, transform.position.z);
+        is_digged = true;
     }
 }
