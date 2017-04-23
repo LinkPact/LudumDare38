@@ -1275,11 +1275,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
-        type: 2}
-      propertyPath: walk_anim_time
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 2}
   m_IsPrefabParent: 0
