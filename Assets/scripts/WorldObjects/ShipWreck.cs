@@ -41,9 +41,6 @@ public class ShipWreck : MonoBehaviour {
         sailing_ship = FindObjectOfType<SailingShip>();
         sprite_renderer = GetComponent<SpriteRenderer>();
 
-        // repair_items = new WorldObjectType[2];
-        // repair_items[0] = WorldObjectType.rope;
-        // repair_items[1] = WorldObjectType.wood;
         current_repair_levels = 0;
     }
 
@@ -54,6 +51,8 @@ public class ShipWreck : MonoBehaviour {
     void OnMouseDown() {
 
         int repair_time = story_manager.GetEventTime(StoryEvent.BuildBoat);
+
+        print(repair_items);
 
         bool has_items = inventory.ItemsInInventory(repair_items);
         bool has_time = needs_manager.TimeRemaining >= repair_time;
