@@ -149,6 +149,7 @@ public class StoryManager : MonoBehaviour {
 
     private void BuildBoat(GameObject caller) {
         if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.BuildBoat]) {
+            ship.has_sailed = true;
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);
