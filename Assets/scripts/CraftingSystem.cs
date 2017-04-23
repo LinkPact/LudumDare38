@@ -29,4 +29,8 @@ public class CraftingSystem : MonoBehaviour {
     public void SetCraftMenuActive(bool is_active) {
         crafting_options_menu_object.SetActive(is_active);
     }
+
+    public bool IsActive() {
+        return crafting_options_menu_object.activeSelf;
+    }
 }

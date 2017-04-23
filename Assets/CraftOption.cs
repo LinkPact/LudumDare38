@@ -13,7 +13,7 @@ public class CraftOption : MonoBehaviour {
 
     void Start () {
         inventory = FindObjectOfType<Inventory>();
-        my_button = GetComponent<Button>();
+        my_button = GetComponentInChildren<Button>();
 	}
 	
 	void Update () {

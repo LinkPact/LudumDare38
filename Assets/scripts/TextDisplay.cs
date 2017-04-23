@@ -92,4 +92,8 @@ public class TextDisplay : MonoBehaviour {
             no_button.gameObject.SetActive(button_prompted);
         }
     }
+
+    public bool IsDisplaying() {
+        return display_elements.gameObject.activeSelf;
+    }
 }

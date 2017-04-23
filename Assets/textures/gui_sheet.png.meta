@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 71843e8aaf9a4984c8e0f1cdea6147a7
-timeCreated: 1492865275
+timeCreated: 1492937110
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: gui_sheet_0
     21300002: gui_sheet_1
+    21300004: gui_sheet_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -80,7 +81,7 @@ TextureImporter:
         width: 236
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -92,6 +93,19 @@ TextureImporter:
         y: 180
         width: 236
         height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gui_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 122
+        width: 23
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
