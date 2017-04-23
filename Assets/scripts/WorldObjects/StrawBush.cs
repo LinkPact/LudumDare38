@@ -10,13 +10,16 @@ public class StrawBush : MonoBehaviour {
     private TextDisplay story_text_display;
     private SpriteRenderer rend;
 
-    void Start() {
+    public void Start() {
         story_text_display = FindObjectOfType<TextDisplay>();
         rend = GetComponent<SpriteRenderer>();
     }
 
-    void OnMouseDown() {
-        story_text_display.ShowText("Making a rope!", this.gameObject);
+    public void OnMouseDown() {
+        story_text_display.ShowText("Making a rope!", this.gameObject, button_prompt: true, yes_event: StoryEvent.MakeRope);
+    }
+
+    public void AddRopeToInventory() {
         GameObject reward_instance = Instantiate(this.rope_prefab);
         reward_instance.transform.position = new Vector3(transform.position.x, transform.position.y + y_spawn_offset, transform.position.z);
         Destroy(this.gameObject);
