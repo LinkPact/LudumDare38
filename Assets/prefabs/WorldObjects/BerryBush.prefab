@@ -74,6 +74,7 @@ MonoBehaviour:
   food_value: 20
   berry_spawn_time: 4
   berry_sprite: {fileID: 21300024, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  message: template message
 --- !u!212 &212400137060211338
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -15,12 +15,17 @@ public class NeedsManager : MonoBehaviour {
         }
     }
 
+    public int time_in_a_day = 12;
+    private int time_remaing;
+    public int Time_remaing {
+        get {
+            return time_remaing;
+        }
+    }
+
 	void Start () {
         day = 1;
-	}
-	
-	void Update () {
-        hunger -= hunger_degen_time * Time.deltaTime;
+        time_remaing = time_in_a_day;
 	}
 
     public void ReduceHunger(float value) {
@@ -34,8 +39,18 @@ public class NeedsManager : MonoBehaviour {
         return hunger / hunger_max;
     }
 
+    public bool SpendTime(int time) {
+        if (time <= time_remaing) {
+            hunger -= hunger_degen_time * time;
+            time_remaing -= time;
+            return true;
+        }
+        return false;
+    }
+
     public void StartNewDay() {
         day += 1;
+        time_remaing = time_in_a_day;
     }
 
 }
