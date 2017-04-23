@@ -35,7 +35,7 @@ public class FishArea : MonoBehaviour {
 
     private Vector3 RandomizePosition(Vector3 orig_pos, float rand_dist) {
         float new_x = orig_pos.x + Random.Range(-rand_dist / 2, rand_dist / 2);
-        float new_y = orig_pos.y + Random.Range(-rand_dist / 2, rand_dist / 2);
+        float new_y = orig_pos.y + Random.Range(-rand_dist / 3, 0);
         return new Vector3(new_x, new_y, orig_pos.z);
     }
 }

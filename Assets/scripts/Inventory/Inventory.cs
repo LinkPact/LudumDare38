@@ -82,7 +82,7 @@ public class Inventory : MonoBehaviour {
                 drop_instance = Instantiate(shovel_prefab);
                 break;
             case WorldObjectType.wood:
-                drop_instance = Instantiate(shovel_prefab);
+                drop_instance = Instantiate(wood_prefab);
                 break;
             default:
                 throw new Exception("Currently unsupported object type: " + object_type);

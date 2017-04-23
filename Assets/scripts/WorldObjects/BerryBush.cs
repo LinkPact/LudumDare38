@@ -16,15 +16,17 @@ public class BerryBush : MonoBehaviour {
     public Sprite berry_sprite;
     private TextDisplay story_controller;
     public string message = "template message";
-    public string no_berries_message = "No berries for you!";
+    public string no_berries_message = "No more berries for you!";
+    private StoryManager story_manager;
 
-	void Start () {
+    void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
         story_controller = GameObject.FindObjectOfType<TextDisplay>();
         has_berries = true;
-	}
-	
-	void Update () {
+        story_manager = FindObjectOfType<StoryManager>();
+    }
+
+    void Update () {
         AssignSprite();
 	}
 
@@ -40,7 +42,8 @@ public class BerryBush : MonoBehaviour {
     void OnMouseDown() {
 
         if (has_berries) {
-            story_controller.ShowText(message, this.gameObject, button_prompt: true, yes_event: StoryEvent.PickBerry);
+            int event_time = story_manager.GetEventTime(StoryEvent.PickBerry);
+            story_controller.ShowText("Do you want to pick and eat berries? (" + event_time + " hour)", this.gameObject, button_prompt: true, yes_event: StoryEvent.PickBerry);
         }
         else {
             story_controller.ShowText(no_berries_message, this.gameObject);

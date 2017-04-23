@@ -28,14 +28,14 @@ public class Fish : MonoBehaviour {
         if (inventory.ItemInInventory(WorldObjectType.fishing_rod)) {
             story_event = StoryEvent.FishWithFishingRod;
             message = "Fish with fishing rod?";
+            event_time = story_manager.GetEventTime(story_event);
+            story_text_display.ShowText(message + "\n(" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
         }
         else {
-            story_event = StoryEvent.Fish;
-            message = "Hunt for fish? It would be much easier with a fishing rod.";
+            message = "You can't fish without a fishing rod. Craft one in the 'Crafting' menu.";
+            story_text_display.ShowText(message, this.gameObject);
         }
 
-        event_time = story_manager.GetEventTime(story_event);
-        story_text_display.ShowText(message + " (" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
     }
 
     public void OnFishEvent() {

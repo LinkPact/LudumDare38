@@ -48,7 +48,7 @@ public class DiggingSpot : MonoBehaviour {
             }
 
             event_time = story_manager.GetEventTime(story_event);
-            story_text_display.ShowText(message + " (" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
+            story_text_display.ShowText(message + "\n(" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
 
         }
         else {

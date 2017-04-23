@@ -8,13 +8,17 @@ public class StrawBush : MonoBehaviour {
     public float y_spawn_offset;
 
     private TextDisplay story_text_display;
+    private StoryManager story_manager;
 
     public void Start() {
         story_text_display = FindObjectOfType<TextDisplay>();
+        story_manager = FindObjectOfType<StoryManager>();
     }
 
     public void OnMouseDown() {
-        story_text_display.ShowText("Making a rope!", this.gameObject, button_prompt: true, yes_event: StoryEvent.MakeRope);
+
+        int event_time = story_manager.GetEventTime(StoryEvent.MakeRope);
+        story_text_display.ShowText("Do you want to make a rope out of this bush?\n(" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: StoryEvent.MakeRope);
     }
 
     public void AddRopeToInventory() {
