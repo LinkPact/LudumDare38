@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public GameObject wood_prefab;
+    public float y_spawn_offset;
+
+    private TextDisplay story_text_display;
+    private SpriteRenderer rend;
+
+    void Start () {
+        story_text_display = FindObjectOfType<TextDisplay>();
+        rend = GetComponent<SpriteRenderer>();
+    }
+
+    public void OnMouseDown() {
+        story_text_display.ShowText("Cut down tree?", this.gameObject, button_prompt: true, yes_event: StoryEvent.CutTree);
+    }
+
+    public void AddWoodToInventory() {
+        GameObject reward_instance = Instantiate(this.wood_prefab);
+        reward_instance.transform.position = new Vector3(transform.position.x, transform.position.y + y_spawn_offset, transform.position.z);
+        Destroy(this.gameObject);
+    }
 }

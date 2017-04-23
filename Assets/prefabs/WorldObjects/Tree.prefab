@@ -80,6 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d219d1c860a0c184db51824ab445bd5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wood_prefab: {fileID: 1290765617055768, guid: 022810c02776b81469b95654ca1c5ca2,
+    type: 2}
+  y_spawn_offset: 0
 --- !u!212 &212015882302400394
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,6 +8,7 @@ public enum StoryEvent {
     EatBerry,
     MakeRope,
     DigSpot,
+    CutTree,
     EndDay
 }
 
@@ -38,6 +39,9 @@ public class StoryManager : MonoBehaviour {
             case StoryEvent.DigSpot:
                 DigOnSpot(caller);
                 break;
+            case StoryEvent.CutTree:
+                CutDownTree(caller);
+                break;
             case StoryEvent.None:
                 throw new System.Exception("None event triggered");
             default:
@@ -64,6 +68,11 @@ public class StoryManager : MonoBehaviour {
     private void DigOnSpot(GameObject caller) {
         caller.GetComponent<DiggingSpot>().AddRewardToInventory();
         needs_manager.SpendTime(4);
+    }
+
+    private void CutDownTree(GameObject caller) {
+        caller.GetComponent<Tree>().AddWoodToInventory();
+        needs_manager.SpendTime(6);
     }
 
     private void StartNewDayEvent() {
