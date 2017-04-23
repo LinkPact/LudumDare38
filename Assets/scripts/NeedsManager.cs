@@ -8,6 +8,8 @@ public class NeedsManager : MonoBehaviour {
     public float hunger_max;
     public float hunger_degen_time;
 
+    private DayEvents day_events;
+
     private int day;
     public int Day {
         get {
@@ -26,6 +28,7 @@ public class NeedsManager : MonoBehaviour {
 	void Start () {
         day = 1;
         time_remaing = time_in_a_day;
+        day_events = FindObjectOfType<DayEvents>();
 	}
 
     public void ReduceHunger(float value) {
@@ -51,6 +54,7 @@ public class NeedsManager : MonoBehaviour {
     public void StartNewDay() {
         day += 1;
         time_remaing = time_in_a_day;
+        day_events.ActivateDay(1);
     }
 
 }
