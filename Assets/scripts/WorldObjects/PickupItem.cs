@@ -19,12 +19,12 @@ namespace Assets.scripts.WorldObjects {
 
         void OnMouseDown() {
 
-            print("on mouse down ");
-            print("Message: " + message);
-
             story_controller.ShowText(message, this.gameObject);
-            inventory.AddItem(new Item(this.gameObject));
-            Destroy(gameObject);
+
+            if (!inventory.IsInventoryFull()) {
+                inventory.AddItem(new Item(this.gameObject));
+                Destroy(gameObject);
+            }
         }
     }
 }
