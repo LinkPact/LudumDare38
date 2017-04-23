@@ -6,9 +6,12 @@ public enum StoryEvent {
     None,
     PickBerry,
     Fish,
+    FishWithFishingRod,
     MakeRope,
     DigSpot,
+    DigSpotWithShovel,
     CutTree,
+    CutTreeWithAxe,
     BuildBoat,
     EndDay
 }
@@ -29,11 +32,19 @@ public class StoryManager : MonoBehaviour {
 
         event_time_dict = new Dictionary<StoryEvent, int>();
         event_time_dict.Add(StoryEvent.PickBerry, 1);
-        event_time_dict.Add(StoryEvent.Fish, 4);
+        event_time_dict.Add(StoryEvent.Fish, 7);
+        event_time_dict.Add(StoryEvent.FishWithFishingRod, 3);
         event_time_dict.Add(StoryEvent.MakeRope, 4);
-        event_time_dict.Add(StoryEvent.DigSpot, 3);
+        event_time_dict.Add(StoryEvent.DigSpot, 5);
+        event_time_dict.Add(StoryEvent.DigSpotWithShovel, 3);
         event_time_dict.Add(StoryEvent.CutTree, 6);
+        event_time_dict.Add(StoryEvent.CutTreeWithAxe, 3);
         event_time_dict.Add(StoryEvent.BuildBoat, 12);
+    }
+
+    public int GetEventTime(StoryEvent target_event) {
+        int event_time = event_time_dict[target_event];
+        return event_time;
     }
 	
     public void TrigEvent(StoryEvent story_event, GameObject caller) {
@@ -45,16 +56,25 @@ public class StoryManager : MonoBehaviour {
                 PickBerryEvent(caller);
                 break;
             case StoryEvent.Fish:
-                Fishing(caller);
+                Fishing(caller, StoryEvent.Fish);
+                break;
+            case StoryEvent.FishWithFishingRod:
+                Fishing(caller, StoryEvent.FishWithFishingRod);
                 break;
             case StoryEvent.MakeRope:
                 MakeRope(caller);
                 break;
             case StoryEvent.DigSpot:
-                DigOnSpot(caller);
+                DigOnSpot(caller, StoryEvent.DigSpot);
+                break;
+            case StoryEvent.DigSpotWithShovel:
+                DigOnSpot(caller, StoryEvent.DigSpotWithShovel);
                 break;
             case StoryEvent.CutTree:
-                CutDownTree(caller);
+                CutDownTree(caller, StoryEvent.CutTree);
+                break;
+            case StoryEvent.CutTreeWithAxe:
+                CutDownTree(caller, StoryEvent.CutTreeWithAxe);
                 break;
             case StoryEvent.BuildBoat:
                 BuildBoat(caller);
@@ -77,9 +97,9 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    private void Fishing(GameObject caller) {
-        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.Fish]) {
-            needs_manager.SpendTime(event_time_dict[StoryEvent.Fish]);
+    private void Fishing(GameObject caller, StoryEvent event_type) {
+        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
+            needs_manager.SpendTime(event_time_dict[event_type]);
             needs_manager.ReduceHunger(caller.GetComponent<Fish>().food_value);
             caller.GetComponent<Fish>().OnFishEvent();
         }
@@ -98,20 +118,20 @@ public class StoryManager : MonoBehaviour {
         }
     }
 
-    private void DigOnSpot(GameObject caller) {
-        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.DigSpot]) {
+    private void DigOnSpot(GameObject caller, StoryEvent event_type) {
+        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
             caller.GetComponent<DiggingSpot>().AddRewardToInventory();
-            needs_manager.SpendTime(event_time_dict[StoryEvent.DigSpot]);
+            needs_manager.SpendTime(event_time_dict[event_type]);
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);
         }
     }
 
-    private void CutDownTree(GameObject caller) {
-        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.CutTree]) {
+    private void CutDownTree(GameObject caller, StoryEvent event_type) {
+        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
             caller.GetComponent<Tree>().AddWoodToInventory();
-            needs_manager.SpendTime(event_time_dict[StoryEvent.CutTree]);
+            needs_manager.SpendTime(event_time_dict[event_type]);
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);

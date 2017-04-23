@@ -11,13 +11,17 @@ public class DiggingSpot : MonoBehaviour {
 
     private TextDisplay story_text_display;
     private SpriteRenderer rend;
+    private Inventory inventory;
+    private StoryManager story_manager;
 
     void Start () {
         is_digged = false;
         story_text_display = FindObjectOfType<TextDisplay>();
         rend = GetComponent<SpriteRenderer>();
-	}
-	
+        inventory = FindObjectOfType<Inventory>();
+        story_manager = FindObjectOfType<StoryManager>();
+    }
+
     void Update() {
         if (!is_digged) {
             rend.sprite = frames[0];
@@ -30,7 +34,22 @@ public class DiggingSpot : MonoBehaviour {
     void OnMouseDown() {
 
         if (!is_digged) {
-            story_text_display.ShowText("Let's dig!", this.gameObject, button_prompt: true, yes_event: StoryEvent.DigSpot);
+            int event_time;
+            StoryEvent story_event;
+            string message;
+
+            if (inventory.ItemInInventory(WorldObjectType.shovel)) {
+                story_event = StoryEvent.DigSpotWithShovel;
+                message = "Dig up this spot with your shovel?";
+            }
+            else {
+                story_event = StoryEvent.DigSpot;
+                message = "Dig up this spot with your bare hands? Easier with a shovel.";
+            }
+
+            event_time = story_manager.GetEventTime(story_event);
+            story_text_display.ShowText(message + " (" + event_time + " hours)", this.gameObject, button_prompt: true, yes_event: story_event);
+
         }
         else {
             story_text_display.ShowText("No more digging here, find another spot!", this.gameObject);
