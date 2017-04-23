@@ -11,6 +11,6 @@ public class ShipWreck : MonoBehaviour {
 	}
 	
     void OnMouseDown() {
-        story_display.ShowText("Maybe we can use this to get away from here...", this.gameObject);
+        story_display.ShowText("Try to repair the boat to leave this cursed island, takes all day", this.gameObject, button_prompt: true, yes_event: StoryEvent.BuildBoat);
     }
 }

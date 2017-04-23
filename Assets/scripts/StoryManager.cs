@@ -9,6 +9,7 @@ public enum StoryEvent {
     MakeRope,
     DigSpot,
     CutTree,
+    BuildBoat,
     EndDay
 }
 
@@ -32,6 +33,7 @@ public class StoryManager : MonoBehaviour {
         event_time_dict.Add(StoryEvent.MakeRope, 4);
         event_time_dict.Add(StoryEvent.DigSpot, 3);
         event_time_dict.Add(StoryEvent.CutTree, 6);
+        event_time_dict.Add(StoryEvent.BuildBoat, 12);
     }
 	
     public void TrigEvent(StoryEvent story_event, GameObject caller) {
@@ -53,6 +55,9 @@ public class StoryManager : MonoBehaviour {
                 break;
             case StoryEvent.CutTree:
                 CutDownTree(caller);
+                break;
+            case StoryEvent.BuildBoat:
+                BuildBoat(caller);
                 break;
             case StoryEvent.None:
                 throw new System.Exception("None event triggered");
@@ -107,6 +112,15 @@ public class StoryManager : MonoBehaviour {
         if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.CutTree]) {
             caller.GetComponent<Tree>().AddWoodToInventory();
             needs_manager.SpendTime(event_time_dict[StoryEvent.CutTree]);
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
+    }
+
+    private void BuildBoat(GameObject caller) {
+        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.BuildBoat]) {
+            story_controller.ShowText("You survived the island!", this.gameObject);
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);
