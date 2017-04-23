@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 0.01
+  grave_sprite: {fileID: 21300040, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
 --- !u!212 &212189436403623318
 SpriteRenderer:
   m_ObjectHideFlags: 1
