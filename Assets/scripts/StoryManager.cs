@@ -163,6 +163,7 @@ public class StoryManager : MonoBehaviour {
 
     private void SailBoat(GameObject caller) {
         ShipWreck ship = caller.GetComponent<ShipWreck>();
+        FindObjectOfType<FadeIn>().StartFade();
         ship.SetSail();
     }
 

@@ -37,7 +37,8 @@ public class NeedsManager : MonoBehaviour {
 
     private void Update() {
         if (hunger < 0) {
-            Debug.Log("You died");
+            hunger = 0;
+            FindObjectOfType<FadeIn>().StartFade();
             player.Died();
             story_manager.ShowText("You died! Play again?", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
         }
