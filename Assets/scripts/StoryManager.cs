@@ -83,6 +83,7 @@ public class StoryManager : MonoBehaviour {
             case StoryEvent.BuildBoat:
                 BuildBoat(caller);
                 break;
+            case StoryEvent.Restart:
                 Restart();
                 break;
             case StoryEvent.None:
