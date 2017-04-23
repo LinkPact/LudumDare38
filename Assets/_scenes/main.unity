@@ -3065,6 +3065,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 480184198}
     m_Modifications:
+    - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
+        type: 2}
+      propertyPath: repair_stages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4463236332737162, guid: 04b965cbbc2dcc14987787c316928cca, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.3892173
@@ -3100,8 +3105,32 @@ Prefab:
     - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
         type: 2}
       propertyPath: total_repair_levels
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
+        type: 2}
+      propertyPath: repair_stages.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300048, guid: 2fe146453d2fbbb4584bc2410732626f,
+        type: 3}
+    - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
+        type: 2}
+      propertyPath: repair_stages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300046, guid: 2fe146453d2fbbb4584bc2410732626f,
+        type: 3}
+    - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
+        type: 2}
+      propertyPath: repair_stages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300022, guid: 2fe146453d2fbbb4584bc2410732626f,
+        type: 3}
+    - target: {fileID: 114323885948963136, guid: 04b965cbbc2dcc14987787c316928cca,
+        type: 2}
+      propertyPath: repair_stages.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300042, guid: 2fe146453d2fbbb4584bc2410732626f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04b965cbbc2dcc14987787c316928cca, type: 2}
   m_IsPrefabParent: 0

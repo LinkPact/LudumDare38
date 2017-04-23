@@ -11,6 +11,9 @@ public class ShipWreck : MonoBehaviour {
     private StoryManager story_manager;
     private SailingShip sailing_ship;
 
+    public Sprite[] repair_stages;
+    private SpriteRenderer sprite_renderer;
+
     private int current_repair_levels;
     public int total_repair_levels;
 
@@ -36,11 +39,16 @@ public class ShipWreck : MonoBehaviour {
         needs_manager = FindObjectOfType<NeedsManager>();
         story_manager = FindObjectOfType<StoryManager>();
         sailing_ship = FindObjectOfType<SailingShip>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
 
         repair_items = new WorldObjectType[2];
         repair_items[0] = WorldObjectType.rope;
         repair_items[1] = WorldObjectType.wood;
         current_repair_levels = 0;
+    }
+
+    void Update() {
+        sprite_renderer.sprite = repair_stages[current_repair_levels];
     }
 
     void OnMouseDown() {
