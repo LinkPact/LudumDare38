@@ -31,6 +31,12 @@ public class NeedsManager : MonoBehaviour {
         day_events = FindObjectOfType<DayEvents>();
 	}
 
+    private void Update() {
+        if (hunger < 0) {
+            Debug.Log("You died");
+        }
+    }
+
     public void ReduceHunger(float value) {
         hunger += value;
         if (hunger > hunger_max) {
