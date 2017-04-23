@@ -22,8 +22,6 @@ public class Fish : MonoBehaviour {
 
     void OnMouseDown() {
 
-        print("Mouse down over fish");
-
         if (EventSystem.current.IsPointerOverGameObject()) {
             return;
         }

@@ -14,7 +14,7 @@ public class TimeText : MonoBehaviour {
     }
 
     void Update() {
-        int time = needs_manager.Time_remaing;
+        int time = needs_manager.TimeRemaining;
         display_text.text = "Time left: " + time;
     }
 }

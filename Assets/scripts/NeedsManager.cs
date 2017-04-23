@@ -20,16 +20,16 @@ public class NeedsManager : MonoBehaviour {
     }
 
     public int time_in_a_day = 12;
-    private int time_remaing;
-    public int Time_remaing {
+    private int time_remaining;
+    public int TimeRemaining {
         get {
-            return time_remaing;
+            return time_remaining;
         }
     }
 
 	void Start () {
         day = 1;
-        time_remaing = time_in_a_day;
+        time_remaining = time_in_a_day;
         day_events = FindObjectOfType<DayEvents>();
         player = FindObjectOfType<Player>();
         story_manager = GameObject.FindObjectOfType<TextDisplay>();
@@ -56,9 +56,9 @@ public class NeedsManager : MonoBehaviour {
     }
 
     public bool SpendTime(int time) {
-        if (time <= time_remaing) {
+        if (time <= time_remaining) {
             hunger -= hunger_degen_time * time;
-            time_remaing -= time;
+            time_remaining -= time;
             return true;
         }
         return false;
@@ -66,7 +66,7 @@ public class NeedsManager : MonoBehaviour {
 
     public void StartNewDay() {
         day += 1;
-        time_remaing = time_in_a_day;
+        time_remaining = time_in_a_day;
         day_events.ActivateDay(day);
     }
 

@@ -48,7 +48,7 @@ public class BerryBush : MonoBehaviour {
 
         if (has_berries) {
             int event_time = story_manager.GetEventTime(StoryEvent.PickBerry);
-            story_controller.ShowText("Do you want to pick and eat berries? (" + event_time + " hour)", this.gameObject, button_prompt: true, yes_event: StoryEvent.PickBerry);
+            story_controller.ShowText("Pick and eat berries? (" + event_time + " hour)", this.gameObject, button_prompt: true, yes_event: StoryEvent.PickBerry);
         }
         else {
             story_controller.ShowText(no_berries_message, this.gameObject);

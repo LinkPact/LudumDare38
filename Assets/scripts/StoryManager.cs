@@ -15,7 +15,8 @@ public enum StoryEvent {
     CutTreeWithAxe,
     BuildBoat,
     EndDay,
-    Restart
+    Restart,
+    SailBoat
 }
 
 public class StoryManager : MonoBehaviour {
@@ -24,7 +25,6 @@ public class StoryManager : MonoBehaviour {
     private Inventory inventory;
     private TextDisplay story_controller;
     private Player player;
-    private SailingShip ship;
 
     public Dictionary<StoryEvent, int> event_time_dict;
     public string no_time_message = "Not enough time left of this day. Get some sleep by the fire";
@@ -34,7 +34,6 @@ public class StoryManager : MonoBehaviour {
         inventory = FindObjectOfType<Inventory>();
         story_controller = FindObjectOfType<TextDisplay>();
         player = FindObjectOfType<Player>();
-        ship = FindObjectOfType<SailingShip>();
 
         event_time_dict = new Dictionary<StoryEvent, int>();
         event_time_dict.Add(StoryEvent.PickBerry, 1);
@@ -45,7 +44,8 @@ public class StoryManager : MonoBehaviour {
         event_time_dict.Add(StoryEvent.DigSpotWithShovel, 3);
         event_time_dict.Add(StoryEvent.CutTree, 6);
         event_time_dict.Add(StoryEvent.CutTreeWithAxe, 3);
-        event_time_dict.Add(StoryEvent.BuildBoat, 12);
+        event_time_dict.Add(StoryEvent.BuildBoat, 8);
+        event_time_dict.Add(StoryEvent.SailBoat, 0);
     }
 
     public int GetEventTime(StoryEvent target_event) {
@@ -85,6 +85,9 @@ public class StoryManager : MonoBehaviour {
             case StoryEvent.BuildBoat:
                 BuildBoat(caller);
                 break;
+            case StoryEvent.SailBoat:
+                SailBoat(caller);
+                break;
             case StoryEvent.Restart:
                 Restart();
                 break;
@@ -96,7 +99,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void PickBerryEvent(GameObject caller) {
-        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.PickBerry]) {
+        if (needs_manager.TimeRemaining >= event_time_dict[StoryEvent.PickBerry]) {
             needs_manager.SpendTime(event_time_dict[StoryEvent.PickBerry]);
             needs_manager.ReduceHunger(caller.GetComponent<BerryBush>().food_value);
             caller.GetComponent<BerryBush>().has_berries = false;
@@ -107,7 +110,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void Fishing(GameObject caller, StoryEvent event_type) {
-        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
+        if (needs_manager.TimeRemaining >= event_time_dict[event_type]) {
             needs_manager.SpendTime(event_time_dict[event_type]);
             needs_manager.ReduceHunger(caller.GetComponent<Fish>().food_value);
             caller.GetComponent<Fish>().OnFishEvent();
@@ -118,7 +121,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void MakeRope(GameObject caller) {
-        if(needs_manager.Time_remaing >= event_time_dict[StoryEvent.MakeRope]) {
+        if(needs_manager.TimeRemaining >= event_time_dict[StoryEvent.MakeRope]) {
             caller.GetComponent<StrawBush>().AddRopeToInventory();
             needs_manager.SpendTime(event_time_dict[StoryEvent.MakeRope]);
         }
@@ -128,7 +131,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void DigOnSpot(GameObject caller, StoryEvent event_type) {
-        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
+        if (needs_manager.TimeRemaining >= event_time_dict[event_type]) {
             caller.GetComponent<DiggingSpot>().AddRewardToInventory();
             needs_manager.SpendTime(event_time_dict[event_type]);
         }
@@ -138,7 +141,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void CutDownTree(GameObject caller, StoryEvent event_type) {
-        if (needs_manager.Time_remaing >= event_time_dict[event_type]) {
+        if (needs_manager.TimeRemaining >= event_time_dict[event_type]) {
             caller.GetComponent<Tree>().AddWoodToInventory();
             needs_manager.SpendTime(event_time_dict[event_type]);
         }
@@ -148,12 +151,19 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void BuildBoat(GameObject caller) {
-        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.BuildBoat]) {
-            ship.has_sailed = true;
+        if (needs_manager.TimeRemaining >= event_time_dict[StoryEvent.BuildBoat]) {
+            ShipWreck ship = caller.GetComponent<ShipWreck>();
+            ship.PerformRepairs();
+            inventory.ConsumeItems(ship.GetRepairItems());
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);
         }
+    }
+
+    private void SailBoat(GameObject caller) {
+        ShipWreck ship = caller.GetComponent<ShipWreck>();
+        ship.SetSail();
     }
 
     private void StartNewDayEvent() {
