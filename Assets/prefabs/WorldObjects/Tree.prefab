@@ -83,6 +83,7 @@ MonoBehaviour:
   wood_prefab: {fileID: 1290765617055768, guid: 022810c02776b81469b95654ca1c5ca2,
     type: 2}
   y_spawn_offset: 0
+  message: Cut down tree?
 --- !u!212 &212015882302400394
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -13,8 +13,6 @@ public class BerryBush : MonoBehaviour {
     private float current_spawn_time;
 
     private SpriteRenderer sprite_renderer;
-    private NeedsManager needs;
-    private Inventory inventory;
     public Sprite berry_sprite;
     private TextDisplay story_controller;
     public string message = "template message";
@@ -22,8 +20,6 @@ public class BerryBush : MonoBehaviour {
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
-        needs = GameObject.FindObjectOfType<NeedsManager>();
-        inventory = GameObject.FindObjectOfType<Inventory>();
         story_controller = GameObject.FindObjectOfType<TextDisplay>();
         has_berries = true;
 	}

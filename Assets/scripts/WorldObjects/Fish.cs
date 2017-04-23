@@ -8,12 +8,10 @@ public class Fish : MonoBehaviour {
     public float food_value;
 
     private TextDisplay story_text_display;
-    private SpriteRenderer rend;
     public string message = "template message";
 
     void Start () {
         story_text_display = FindObjectOfType<TextDisplay>();
-        rend = GetComponent<SpriteRenderer>();
     }
 
     void OnMouseDown() {
