@@ -88,6 +88,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde24e29ca63abb43a4ee9d20747e2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300026, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  - {fileID: 21300044, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  walk_anim_time: 1
   move_speed: 0.01
   grave_sprite: {fileID: 21300040, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
 --- !u!212 &212189436403623318

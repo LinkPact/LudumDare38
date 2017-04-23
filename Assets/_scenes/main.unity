@@ -1274,6 +1274,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114617462472547886, guid: 7fb77674f798cdf44a854b2e3e093b65,
+        type: 2}
+      propertyPath: walk_anim_time
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fb77674f798cdf44a854b2e3e093b65, type: 2}
   m_IsPrefabParent: 0
@@ -1490,7 +1495,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a82087a22fac5464aafcfc32d0ce58ca, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.258
   m_Pitch: 1
   Loop: 1
   Mute: 0

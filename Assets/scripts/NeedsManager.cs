@@ -41,6 +41,7 @@ public class NeedsManager : MonoBehaviour {
             player.Died();
             story_manager.ShowText("You died! Play again?", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
         }
+
     }
 
     public void ReduceHunger(float value) {
