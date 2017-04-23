@@ -8,11 +8,9 @@ public class StrawBush : MonoBehaviour {
     public float y_spawn_offset;
 
     private TextDisplay story_text_display;
-    private SpriteRenderer rend;
 
     public void Start() {
         story_text_display = FindObjectOfType<TextDisplay>();
-        rend = GetComponent<SpriteRenderer>();
     }
 
     public void OnMouseDown() {
