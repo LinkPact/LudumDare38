@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212149027833818924}
   - component: {fileID: 114837552031452444}
   - component: {fileID: 61623609620758310}
+  - component: {fileID: 114888071945577208}
   m_Layer: 0
   m_Name: FishingRod
   m_TagString: Untagged
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: A fishing rod - It will be much easier to catch fish now!
+--- !u!114 &114888071945577208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905689602975352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 5
 --- !u!212 &212149027833818924
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212408207111696546}
   - component: {fileID: 114889757209525098}
   - component: {fileID: 61200207512754040}
+  - component: {fileID: 114171642566961200}
   m_Layer: 0
   m_Name: DiggingSpot
   m_TagString: Untagged
@@ -56,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.12, y: 0.07}
+--- !u!114 &114171642566961200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1071224531520210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 3
 --- !u!114 &114889757209525098
 MonoBehaviour:
   m_ObjectHideFlags: 1

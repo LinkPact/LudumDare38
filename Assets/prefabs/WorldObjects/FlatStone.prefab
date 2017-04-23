@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212576792242914764}
   - component: {fileID: 114652076683166046}
   - component: {fileID: 61424478640667420}
+  - component: {fileID: 114937802929451350}
   m_Layer: 0
   m_Name: FlatStone
   m_TagString: Untagged
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: A flat stone - This is what I need to make a shovel!
+--- !u!114 &114937802929451350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585276818956404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 6
 --- !u!212 &212576792242914764
 SpriteRenderer:
   m_ObjectHideFlags: 1

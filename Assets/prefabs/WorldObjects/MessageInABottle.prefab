@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212218863676708932}
   - component: {fileID: 61547966119023462}
   - component: {fileID: 114630543460141408}
+  - component: {fileID: 114109635455208776}
   m_Layer: 0
   m_Name: MessageInABottle
   m_TagString: Untagged
@@ -56,6 +57,18 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.13, y: 0.07}
+--- !u!114 &114109635455208776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1213395064516026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 8
 --- !u!114 &114630543460141408
 MonoBehaviour:
   m_ObjectHideFlags: 1

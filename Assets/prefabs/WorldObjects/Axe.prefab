@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212133281673574626}
   - component: {fileID: 61119617211248722}
   - component: {fileID: 114546837269790754}
+  - component: {fileID: 114877596584658562}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: An axe!
+--- !u!114 &114877596584658562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159944865951586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 0
 --- !u!212 &212133281673574626
 SpriteRenderer:
   m_ObjectHideFlags: 1

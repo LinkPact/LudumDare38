@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212008568680535554}
   - component: {fileID: 114482082122949614}
   - component: {fileID: 61884636778689388}
+  - component: {fileID: 114685898429870038}
   m_Layer: 0
   m_Name: SharpStone
   m_TagString: Untagged
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: A sharp stone, maybe I could use this to build an axe...
+--- !u!114 &114685898429870038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1178618755588104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 10
 --- !u!212 &212008568680535554
 SpriteRenderer:
   m_ObjectHideFlags: 1

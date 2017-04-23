@@ -14,6 +14,7 @@ public class CraftingSystem : MonoBehaviour {
         crafting_options_menu_object = GetComponentInChildren<CraftingOptions>().gameObject;
 
         is_craft_menu_currently_active = false;
+        SetCraftMenuActive(is_craft_menu_currently_active);
 	}
 	
 	void Update () {
@@ -22,6 +23,10 @@ public class CraftingSystem : MonoBehaviour {
 
     public void ToggleCraftMenuOptions() {
         is_craft_menu_currently_active = !is_craft_menu_currently_active;
-        crafting_options_menu_object.SetActive(is_craft_menu_currently_active);
+        SetCraftMenuActive(is_craft_menu_currently_active);
+    }
+
+    public void SetCraftMenuActive(bool is_active) {
+        crafting_options_menu_object.SetActive(is_active);
     }
 }

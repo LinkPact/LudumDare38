@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212481561759715086}
   - component: {fileID: 114414660528437982}
   - component: {fileID: 61004371076888082}
+  - component: {fileID: 114918989938073212}
   m_Layer: 0
   m_Name: Shovel
   m_TagString: Untagged
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: Shovel, time to dig!
+--- !u!114 &114918989938073212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632301899059290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 12
 --- !u!212 &212481561759715086
 SpriteRenderer:
   m_ObjectHideFlags: 1
