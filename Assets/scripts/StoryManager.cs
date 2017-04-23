@@ -16,10 +16,22 @@ public class StoryManager : MonoBehaviour {
 
     private NeedsManager needs_manager;
     private Inventory inventory;
+    private TextDisplay story_controller;
+
+    public Dictionary<StoryEvent, int> event_time_dict;
+    public string no_time_message = "Not enough time left of this day. Get some sleep by the fire";
 
     void Start () {
         needs_manager = FindObjectOfType<NeedsManager>();
         inventory = FindObjectOfType<Inventory>();
+        story_controller = GameObject.FindObjectOfType<TextDisplay>();
+
+        event_time_dict = new Dictionary<StoryEvent, int>();
+        event_time_dict.Add(StoryEvent.PickBerry, 1);
+        event_time_dict.Add(StoryEvent.Fish, 4);
+        event_time_dict.Add(StoryEvent.MakeRope, 4);
+        event_time_dict.Add(StoryEvent.DigSpot, 3);
+        event_time_dict.Add(StoryEvent.CutTree, 6);
     }
 	
     public void TrigEvent(StoryEvent story_event, GameObject caller) {
@@ -50,31 +62,55 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void PickBerryEvent(GameObject caller) {
-        needs_manager.SpendTime(1);
-        needs_manager.ReduceHunger(caller.GetComponent<BerryBush>().food_value);
-        caller.GetComponent<BerryBush>().has_berries = false;
+        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.PickBerry]) {
+            needs_manager.SpendTime(event_time_dict[StoryEvent.PickBerry]);
+            needs_manager.ReduceHunger(caller.GetComponent<BerryBush>().food_value);
+            caller.GetComponent<BerryBush>().has_berries = false;
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
     }
 
     private void Fishing(GameObject caller) {
-        needs_manager.SpendTime(4);
-        needs_manager.ReduceHunger(caller.GetComponent<Fish>().food_value);
-        caller.GetComponent<Fish>().OnFishEvent();
+        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.Fish]) {
+            needs_manager.SpendTime(event_time_dict[StoryEvent.Fish]);
+            needs_manager.ReduceHunger(caller.GetComponent<Fish>().food_value);
+            caller.GetComponent<Fish>().OnFishEvent();
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
     }
 
     private void MakeRope(GameObject caller) {
-        caller.GetComponent<StrawBush>().AddRopeToInventory();
-        needs_manager.SpendTime(3);
-
+        if(needs_manager.Time_remaing >= event_time_dict[StoryEvent.MakeRope]) {
+            caller.GetComponent<StrawBush>().AddRopeToInventory();
+            needs_manager.SpendTime(event_time_dict[StoryEvent.MakeRope]);
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
     }
 
     private void DigOnSpot(GameObject caller) {
-        caller.GetComponent<DiggingSpot>().AddRewardToInventory();
-        needs_manager.SpendTime(4);
+        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.DigSpot]) {
+            caller.GetComponent<DiggingSpot>().AddRewardToInventory();
+            needs_manager.SpendTime(event_time_dict[StoryEvent.DigSpot]);
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
     }
 
     private void CutDownTree(GameObject caller) {
-        caller.GetComponent<Tree>().AddWoodToInventory();
-        needs_manager.SpendTime(6);
+        if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.CutTree]) {
+            caller.GetComponent<Tree>().AddWoodToInventory();
+            needs_manager.SpendTime(event_time_dict[StoryEvent.CutTree]);
+        }
+        else {
+            story_controller.ShowText(no_time_message, this.gameObject);
+        }
     }
 
     private void StartNewDayEvent() {
