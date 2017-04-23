@@ -7,11 +7,9 @@ public class Player : MonoBehaviour {
     private bool alive = true;
 
     private SpriteRenderer sprite_renderer;
-    private Rigidbody2D rigi;
 
 	void Start () {
         sprite_renderer = GetComponent<SpriteRenderer>();
-        rigi = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update () {

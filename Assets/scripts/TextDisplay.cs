@@ -25,7 +25,6 @@ public class TextDisplay : MonoBehaviour {
     public float min_display_time = 0.1f;
 
     private DisplayElements display_elements;
-    private NeedsManager needs_manager;
     private StoryManager story_manager;
 
     public void ShowText(string message, GameObject caller, bool button_prompt=false, StoryEvent yes_event=StoryEvent.None) {
@@ -57,7 +56,6 @@ public class TextDisplay : MonoBehaviour {
         no_button = GetComponentInChildren<NoButton>();
         button_prompted = false;
 
-        needs_manager = FindObjectOfType<NeedsManager>();
         story_manager = FindObjectOfType<StoryManager>();
     }
 

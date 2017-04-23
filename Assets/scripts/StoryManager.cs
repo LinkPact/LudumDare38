@@ -24,6 +24,7 @@ public class StoryManager : MonoBehaviour {
     private Inventory inventory;
     private TextDisplay story_controller;
     private Player player;
+    private SailingShip ship;
 
     public Dictionary<StoryEvent, int> event_time_dict;
     public string no_time_message = "Not enough time left of this day. Get some sleep by the fire";
@@ -33,6 +34,7 @@ public class StoryManager : MonoBehaviour {
         inventory = FindObjectOfType<Inventory>();
         story_controller = FindObjectOfType<TextDisplay>();
         player = FindObjectOfType<Player>();
+        ship = FindObjectOfType<SailingShip>();
 
         event_time_dict = new Dictionary<StoryEvent, int>();
         event_time_dict.Add(StoryEvent.PickBerry, 1);
@@ -147,7 +149,6 @@ public class StoryManager : MonoBehaviour {
 
     private void BuildBoat(GameObject caller) {
         if (needs_manager.Time_remaing >= event_time_dict[StoryEvent.BuildBoat]) {
-            story_controller.ShowText("You survived the island!", this.gameObject);
         }
         else {
             story_controller.ShowText(no_time_message, this.gameObject);
