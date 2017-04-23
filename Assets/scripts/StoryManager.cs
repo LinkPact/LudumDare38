@@ -167,7 +167,7 @@ public class StoryManager : MonoBehaviour {
     }
 
     private void StartNewDayEvent() {
-        print("End day triggered!!");
+        FindObjectOfType<FadeIn>().StartFade();
         needs_manager.StartNewDay();
     }
 
