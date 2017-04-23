@@ -6,30 +6,34 @@ using UnityEngine.UI;
 public class FadeIn : MonoBehaviour {
 
     public float fade_in_time;
-    private float time_pased;
+    private float time_passed;
 
-    private Image fadePanel;
-    private Color currentColor = Color.black;
+    private Color start_color = Color.black;
+    private Color currentColor;
+    private FadePanel fade_panel_script;
+    private Image panel_image;
 
 	void Start () {
-		fadePanel = gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
+        fade_panel_script = GetComponentInChildren<FadePanel>();
+        panel_image = fade_panel_script.gameObject.GetComponent<Image>();
+        currentColor = start_color;
 	}
 	
     public void StartFade() {
-        time_pased = 0;
+        time_passed = 0;
         currentColor = Color.black;
-        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        fade_panel_script.gameObject.SetActive(true);
     }
 
 	void Update () {
-        time_pased += Time.deltaTime;
-		if (Time.timeSinceLevelLoad < fade_in_time) {
+        time_passed += Time.deltaTime;
+		if (time_passed < fade_in_time) {
             float alphaChange = Time.deltaTime / fade_in_time;
             currentColor.a -= alphaChange;
-            fadePanel.color = currentColor;
+            panel_image.color = currentColor;
         }
         else {
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            fade_panel_script.gameObject.SetActive(false);
         }
 	}
 
