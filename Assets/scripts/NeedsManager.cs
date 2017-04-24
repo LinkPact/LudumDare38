@@ -36,9 +36,9 @@ public class NeedsManager : MonoBehaviour {
     }
 
     private void Update() {
-        if (Day >= 7) {
+        if (Day > 7) {
             player.Died();
-            story_manager.ShowText("Time has run out!\nYou failed to leave the island before the 7th day.\n\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
+            story_manager.ShowText("Time has run out!\nYou failed to leave the island before the 7th day ends.\n\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
         }
         if (hunger <= 0) {
             hunger = 1;
