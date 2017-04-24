@@ -22,6 +22,6 @@ public class SailingShip : MonoBehaviour {
 
     public void Sail() {
         FindObjectOfType<Camera>().center_trans = transform;
-        story_controller.ShowText("You survived the island!\nMade for LudumDare 38 by Linkpact Games\n\n Play again?", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
+        story_controller.ShowText("You survived the island!\n\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
     }
 }
