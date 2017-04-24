@@ -44,6 +44,6 @@ public class CampFire : MonoBehaviour {
             return;
         }
 
-        story_controller.ShowText("Time to end day? (Hunger does not increase during sleep)", this.gameObject, button_prompt:true, yes_event:StoryEvent.EndDay);
+        story_controller.ShowText("Time to end day?", this.gameObject, button_prompt:true, yes_event:StoryEvent.EndDay);
     }
 }
