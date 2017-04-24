@@ -40,7 +40,7 @@ public class NeedsManager : MonoBehaviour {
             hunger = 0;
             FindObjectOfType<FadeIn>().StartFade();
             player.Died();
-            story_manager.ShowText("You died!\nMade for LudumDare 38 by Linkpact Games.\n\nPlay again?", this.gameObject);
+            story_manager.ShowText("You died!\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
         }
 
     }
@@ -69,6 +69,7 @@ public class NeedsManager : MonoBehaviour {
         day += 1;
         time_remaining = time_in_a_day;
         day_events.ActivateDay(day);
+        hunger -= hunger_degen_time * 3;
     }
 
 }
