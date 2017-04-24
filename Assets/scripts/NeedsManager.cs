@@ -41,7 +41,7 @@ public class NeedsManager : MonoBehaviour {
             story_manager.ShowText("Time has run out!\nYou failed to leave the island before the 7th day.\n\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
         }
         if (hunger <= 0) {
-            hunger = 0;
+            hunger = 1;
             FindObjectOfType<FadeIn>().StartFade();
             player.Died();
             story_manager.ShowText("You died of hunger!\n\nMade for LudumDare 38 by Linkpact Games", this.gameObject);
