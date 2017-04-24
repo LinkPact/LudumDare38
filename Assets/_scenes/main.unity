@@ -137,6 +137,118 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2691d2db6c0230e468bdc8ebdeeeb51e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &51179844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1613547668105242, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 51179845}
+  - component: {fileID: 51179849}
+  - component: {fileID: 51179848}
+  - component: {fileID: 51179847}
+  - component: {fileID: 51179846}
+  m_Layer: 0
+  m_Name: MessageInABottle (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51179845
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4194684743110968, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51179844}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.142, y: -0.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 855721125}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &51179846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114800289453449792, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51179844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world_object_type: 8
+--- !u!114 &51179847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114903268579524042, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51179844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: You need to escape. Or else, you will end up like the last one. Please,
+    don't end up like the last one.
+--- !u!61 &51179848
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 61597877344361352, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51179844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.07}
+--- !u!212 &51179849
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 212798032685340668, guid: e9c4085db63529741a4cb8a7d0f9df05,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 51179844}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1489232977
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300034, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &85710388
 Prefab:
   m_ObjectHideFlags: 0
@@ -365,7 +477,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.94
+      value: 0.94000006
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -389,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_Name
@@ -408,118 +520,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
     type: 2}
   m_PrefabInternal: {fileID: 207970299}
---- !u!1001 &218528773
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1543393461}
-    m_Modifications:
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.364
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.639
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_Name
-      value: MessageInABottle (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
-        type: 2}
-      propertyPath: message
-      value: Noone will save me, noone will save me, noone...
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &218528774 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
-    type: 2}
-  m_PrefabInternal: {fileID: 218528773}
---- !u!1001 &237033151
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1543393461}
-    m_Modifications:
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.229
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.336
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_Name
-      value: MessageInABottle (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
-        type: 2}
-      propertyPath: message
-      value: Are you there? Am I here? Is anyone near?
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &237033152 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
-    type: 2}
-  m_PrefabInternal: {fileID: 237033151}
 --- !u!4 &258812164 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4576605431060098, guid: 2691d2db6c0230e468bdc8ebdeeeb51e,
@@ -562,7 +562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_Name
@@ -571,7 +571,7 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: The week is soon over, the week is soon over, the week...
+      value: I found my peace. Now, I need to find my sanity.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -934,7 +934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_Name
@@ -943,7 +943,7 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: You need to get away soon, away, soon away, soon...
+      value: You need to get away soon. Today. Now. Time is up.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -1468,8 +1468,8 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: Eat, chop, dig, build, sleep, eat, chop, sleep, dig... Sometimes, I don't
-        miss the Big World.
+      value: Eat, chop, dig, build, sleep, eat, chop, sleep, dig... Somehow, I even
+        don't miss the big world.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -2043,6 +2043,8 @@ Transform:
   - {fileID: 1140422930}
   - {fileID: 1737793278}
   - {fileID: 1332996436}
+  - {fileID: 2041065578}
+  - {fileID: 51179845}
   m_Father: {fileID: 1094200786}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2287,7 +2289,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2096316631}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1019558818
 MonoBehaviour:
@@ -2366,6 +2368,62 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1051658026
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1319230203}
+    m_Modifications:
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+      propertyPath: m_Name
+      value: MessageInABottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
+        type: 2}
+      propertyPath: message
+      value: First food, then escape. That's a good plan, isn't it? Isn't it?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1051658027 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1051658026}
 --- !u!1001 &1062474426
 Prefab:
   m_ObjectHideFlags: 0
@@ -2649,7 +2707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1319230203}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1085624450
 MonoBehaviour:
@@ -2832,62 +2890,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1096485325
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1543393461}
-    m_Modifications:
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.847
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.547
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_Name
-      value: MessageInABottle (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
-        type: 2}
-      propertyPath: message
-      value: So hungry, so hungry, so hungry...
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1096485326 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1096485325}
 --- !u!4 &1108209272 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4028976665705318, guid: 781d98c12b278544c9d95ea816a1f6bb,
@@ -3496,10 +3498,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2041065578}
   - {fileID: 1085624449}
   - {fileID: 1150128530}
   - {fileID: 207970300}
+  - {fileID: 1051658027}
   m_Father: {fileID: 1094200786}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3540,7 +3542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4028976665705318, guid: 781d98c12b278544c9d95ea816a1f6bb, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1315960156219562, guid: 781d98c12b278544c9d95ea816a1f6bb, type: 2}
       propertyPath: m_Name
@@ -3549,63 +3551,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 781d98c12b278544c9d95ea816a1f6bb, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1331133711
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2096316631}
-    m_Modifications:
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.834
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.967
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-      propertyPath: m_Name
-      value: MessageInABottle (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
-        type: 2}
-      propertyPath: message
-      value: Have you found out how to craft tools yet? It is right there, at the
-        top. Wish I had found it sooner...
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1331133712 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1331133711}
 --- !u!1001 &1332996435
 Prefab:
   m_ObjectHideFlags: 0
@@ -3735,117 +3680,6 @@ Camera:
   m_PrefabParentObject: {fileID: 20213912681259708, guid: 8af778e5fa456b440a45a136297e93c0,
     type: 2}
   m_PrefabInternal: {fileID: 1785975507}
---- !u!1 &1453215208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1554554960700428, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1453215209}
-  - component: {fileID: 1453215213}
-  - component: {fileID: 1453215212}
-  - component: {fileID: 1453215211}
-  - component: {fileID: 1453215210}
-  m_Layer: 0
-  m_Name: MessageInABottle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1453215209
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4826431659208450, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453215208}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.337, y: -1.406, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2096316631}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1453215210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114384658639127468, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453215208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a3236a0dc6c6c45bc507d8f5947e1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  world_object_type: 8
---- !u!114 &1453215211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114660163344598334, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453215208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: Are you starving yet? Those berries won't last forever...
---- !u!61 &1453215212
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 61732305074180854, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453215208}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.07}
---- !u!212 &1453215213
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 212415897846626396, guid: e9c4085db63529741a4cb8a7d0f9df05,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453215208}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1489232977
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300034, guid: 2fe146453d2fbbb4584bc2410732626f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
 --- !u!1001 &1514959830
 Prefab:
   m_ObjectHideFlags: 0
@@ -4024,10 +3858,7 @@ Transform:
   - {fileID: 2066907123}
   - {fileID: 1943824529}
   - {fileID: 85710389}
-  - {fileID: 218528774}
-  - {fileID: 1096485326}
   - {fileID: 407752585}
-  - {fileID: 237033152}
   - {fileID: 1614120096}
   - {fileID: 270084823}
   m_Father: {fileID: 1094200786}
@@ -4216,7 +4047,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4165412584204842, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1213395064516026, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
       propertyPath: m_Name
@@ -4225,7 +4056,7 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: 'Day 7: Out of food, out of water, out of sanity'
+      value: Can't stay here, can't stay here, can't stay here...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -4396,8 +4227,8 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: Sometimes, I almost feel a sense of tranquility on this island. Why can't
-        I stay here longer?
+      value: I almost have a sense of tranquility on this island. Why can't I stay
+        here longer? I have to get away soon...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -4626,7 +4457,7 @@ Prefab:
     - target: {fileID: 114630543460141408, guid: 1036d513c8226b246a339e6c2ca2c16e,
         type: 2}
       propertyPath: message
-      value: Time is up! Time is up! Time is...
+      value: Time is running out for me. For you. Eventually, for everyone.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1036d513c8226b246a339e6c2ca2c16e, type: 2}
@@ -4711,11 +4542,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2041065577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.237, y: -1.228, z: 0}
+  m_LocalPosition: {x: 1.2369999, y: -1.2279999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1319230203}
-  m_RootOrder: 0
+  m_Father: {fileID: 855721125}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2041065579
 MonoBehaviour:
@@ -4742,8 +4573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aafc5c487663a549b4feae6b5e475f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: You are not the first one trapped in this small world you know. You are
-    not somehow 'special'.
+  message: You are not the first one trapped in this small, nor will you be the last.
+    A brief retreat. But it always ends, and it always ends soon.
 --- !u!61 &2041065581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4840,13 +4671,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1453215209}
   - {fileID: 1019558817}
   - {fileID: 1767809314}
   - {fileID: 759702370}
   - {fileID: 1535743765}
   - {fileID: 503395990}
-  - {fileID: 1331133712}
   m_Father: {fileID: 1094200786}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
