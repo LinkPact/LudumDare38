@@ -39,9 +39,9 @@ public class StoryManager : MonoBehaviour {
         event_time_dict.Add(StoryEvent.PickBerry, 1);
         event_time_dict.Add(StoryEvent.Fish, 7);
         event_time_dict.Add(StoryEvent.FishWithFishingRod, 2);
-        event_time_dict.Add(StoryEvent.MakeRope, 4);
-        event_time_dict.Add(StoryEvent.DigSpot, 5);
-        event_time_dict.Add(StoryEvent.DigSpotWithShovel, 3);
+        event_time_dict.Add(StoryEvent.MakeRope, 3);
+        event_time_dict.Add(StoryEvent.DigSpot, 4);
+        event_time_dict.Add(StoryEvent.DigSpotWithShovel, 2);
         event_time_dict.Add(StoryEvent.CutTree, 7);
         event_time_dict.Add(StoryEvent.CutTreeWithAxe, 3);
         event_time_dict.Add(StoryEvent.BuildBoat, 8);
