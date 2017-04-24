@@ -44,7 +44,7 @@ public class NeedsManager : MonoBehaviour {
             hunger = 1;
             FindObjectOfType<FadeIn>().StartFade();
             player.Died();
-            story_manager.ShowText("You died of hunger!\n\nMade for\nLudumDare 38 by Linkpact Games", this.gameObject);
+            story_manager.ShowText("You died of hunger!\n\nMade for\nLudumDare 38 by Linkpact Games", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
         }
 
     }
