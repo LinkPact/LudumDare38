@@ -7,8 +7,9 @@ public class DayEvents : MonoBehaviour {
     public GameObject[] day_objects;
 
     public void ActivateDay(int day) {
-        print("Activating day: " + day);
-        day_objects[day - 1].SetActive(true);
+        if (day <= day_objects.Length) {
+            day_objects[day - 1].SetActive(true);
+        }
     }
 
     void Start() {

@@ -38,13 +38,13 @@ public class NeedsManager : MonoBehaviour {
     private void Update() {
         if (Day > 7) {
             player.Died();
-            story_manager.ShowText("Time has run out!\nYou failed to leave the island before the 7th day ends.\n\nMade for\nLudumDare 38 by Linkpact Games", this.gameObject);
+            story_manager.ShowText("Time has run out!\nYou failed to leave the island before the end of the 7th day.\n\nMade for\nLudumDare 38 by Linkpact Games", this.gameObject);
         }
         if (hunger <= 0) {
             hunger = 1;
             FindObjectOfType<FadeIn>().StartFade();
             player.Died();
-            story_manager.ShowText("You died of hunger!\n\nMade for\nLudumDare 38 by Linkpact Games", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
+            story_manager.ShowText("You died of hunger!\n\nMade for\nLudumDare 38 by Linkpact Games\nRestart game?", this.gameObject, button_prompt: true, yes_event: StoryEvent.Restart);
         }
 
     }
