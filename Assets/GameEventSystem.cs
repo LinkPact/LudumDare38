@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventSystem : MonoBehaviour {
+public class GameEventSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,5 +12,9 @@ public class EventSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+        if (Input.GetKey("escape")) {
+            Application.Quit();
+        }
+
 	}
 }
